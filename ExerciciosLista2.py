@@ -22,11 +22,13 @@ def exercicio01():
 	print("Fim.")
 
 def exercicio03():
-	cargos = { 1 : "Gerente",
-			   2 : "Supervisor",
-			   3 : "Contador",
-			   4 : "Digitador",
-			   5 : "Auxiliar Administrativo"}
+	cargos = { 
+		1 : "Gerente",
+		2 : "Supervisor",
+		3 : "Contador",
+		4 : "Digitador",
+		5 : "Auxiliar Administrativo"
+	}
 	while True:
 		codigo = int(input("Informe o código do funcionário: "))
 
@@ -118,10 +120,12 @@ def exercicio07():
 		else:
 			return quociente
 
-	opcoes = { 1 : soma,
-			   2 : subtracao,
-			   3 : multiplicacao,
-			   4 : divisao }
+	opcoes = { 
+		1 : soma,
+		2 : subtracao,
+		3 : multiplicacao,
+		4 : divisao 
+	}
 	while True:
 		opcao_escolhida = int( input(
 			"Escolha uma das opções abaixo:"
