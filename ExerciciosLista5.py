@@ -11,6 +11,7 @@ def exercicio01():
         vector.append(random.randint(1, 50))
         print(vector[i])
 
+
 # NOTE: Faça um algoritmo que gere um vetor de 10 posições com números inteiros preenchidos
 # NOTE: aleatoriamente no intervalo 0 a 50, em seguida, escreva os números gerados.
 # NOTE: O Tamanho do vetor e o limite de geração dos número aleatórios deverá ser
