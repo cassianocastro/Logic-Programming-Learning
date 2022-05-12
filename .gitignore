@@ -1,6 +1,1 @@
-src/Foo
-src/foo.py
-src/meu_primeiro_TKinter.py
-src/meu_segundo_TKinter.py
-src/exerciseFromTest.py
-src/teste.py
+__pycache__/

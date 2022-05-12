@@ -104,9 +104,7 @@ def exercicio06():
 # NOTE: vetor e o limite de geração dos número aleatórios deverá ser definido em variável constante.
 
 def exercicio07():
-    vector     = [None] * 10
-    vectorEven = []
-    vectorOdd  = []
+    vectorOdd, vectorEven, vector = [], [], [None] * 10
 
     for i in range( 10 ):
         vector[i] = random.randint(0, 50)
@@ -120,12 +118,7 @@ def exercicio07():
         "Vetor de Números Pares:\n"
         "{}\n"
         "Vetor de Números Ímpares:\n"
-        "{}\n"
-        .format(
-            vector,
-            vectorEven,
-            vectorOdd
-        )
+        "{}\n".format(vector, vectorEven, vectorOdd)
     )
 
 # NOTE: Faça um algoritmo que gere um vetor de 5 posições preenchido com números aleatoriamente
@@ -184,4 +177,4 @@ def exercicio10():
     print(vector)
 
 if __name__ == '__main__':
-    exercicio9()
+    exercicio09()
