@@ -153,4 +153,5 @@ def exercicio010():
         "{}".format(vector),
         "\nMaior número encontrado: %.2d" % maior
     )
+
 exercicio010()

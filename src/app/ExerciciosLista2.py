@@ -22,7 +22,7 @@ def exercicio01():
 	print("Fim.")
 
 def exercicio03():
-	cargos = { 
+	cargos = {
 		1 : "Gerente",
 		2 : "Supervisor",
 		3 : "Contador",
@@ -42,7 +42,7 @@ def exercicio03():
 def exercicio04():
 	while True:
 		numero = int(input("Informe o número de classificação: "))
-		
+
 		if numero == 0:
 			break
 		elif numero == 1 or numero == 2:
@@ -64,7 +64,7 @@ def exercicio05():
 
 		while not sexo.startswith("F") and not sexo.startswith("M") and not sexo.startswith("S"):
 			sexo = input("Opção inválida. Digite novamente: ").capitalize()
-		
+
 		if not sexo.startswith("S"):
 			idade = input("Idade: ")
 			idade = int(idade)
@@ -78,7 +78,7 @@ def exercicio05():
 				if idade >= 18:
 					print("Pode ter um automóvel azul.")
 				else:
-					print("Pode ter uma bicicleta azul.")	
+					print("Pode ter uma bicicleta azul.")
 		else:
 			break
 
@@ -98,7 +98,7 @@ def exercicio06():
 		print(f"Seu peso ideal é de: {peso:.2f} Kg")
 
 		opcao = input("Deseja realizar novamente [s/n]? ").lower()
-		
+
 		while not opcao.startswith("s") and not opcao.startswith("n"):
 			opcao = input("Opção inválida. Digite novamente: ").lower()
 
@@ -120,11 +120,11 @@ def exercicio07():
 		else:
 			return quociente
 
-	opcoes = { 
+	opcoes = {
 		1 : soma,
 		2 : subtracao,
 		3 : multiplicacao,
-		4 : divisao 
+		4 : divisao
 	}
 	while True:
 		opcao_escolhida = int( input(
@@ -149,7 +149,7 @@ def exercicio07():
 				print("Resultado: Nulo")
 		else:
 			break
-			
+
 def exercicio08():
 	while True:
 		idade = int(input("Informe a idade o nadador ou <0> para sair: "))
