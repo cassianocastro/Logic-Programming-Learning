@@ -1,24 +1,58 @@
+#include <cstdlib>
+#include <iomanip>
+#include <iostream>
+#include <stdexcept>
 
-class Exercise01:
+/**
+ * List 01, Exercise 01.
+ */
+class Exercise01
+{
 
-    """List 01, Exercise 01."""
+    public:
+        float getDolars(float, float);
 
-    def getDolars(self, cotacao_dolar, valor_reais):
-        try:
-            return float(valor_reais) / float(cotacao_dolar)
-        except:
-            raise Exception("Os dados informados não puderam ser convertidos...")
+        void doExercise(void);
+};
 
-    def do(self):
-        try:
-            cotacao     = input("Cotação do Dólar atualmente: ")
-            valor_reais = input("Valor em reais a converter: ")
+float Exercise01::getDolars(float cotacao, float value)
+{
+    if ( cotacao == 0.0f )
+    {
+        throw std::runtime_error("Os dados informados não puderam ser convertidos...");
+    }
 
-            print(
-                f"O valor em dólares é: U$ {self.getDolars(cotacao, valor_reais):.2f}."
-            )
-        except Exception as e:
-            print(e)
+    return value / cotacao;
+}
 
-if __name__ == '__main__':
-    Exercise01.do()
+void Exercise01::doExercise(void)
+{
+    float cotacao = 0.0f, value = 0.0f;
+
+    std::cout << "Cotação do Dólar atualmente: ";
+    std::cin >> cotacao;
+
+    std::cout << "Valor em reais a converter: ";
+    std::cin >> value;
+
+    try
+    {
+        float result = this->getDolars(cotacao, value);
+
+        std::cout << "O valor em dólares é: U$ " << std::setprecision(4) << result << '\n';
+    }
+    catch ( const std::runtime_error& e )
+    {
+        std::cerr << e.what() << '\n';
+    }
+}
+
+/**
+ *
+ */
+int main(void)
+{
+    Exercise01().doExercise();
+
+    return EXIT_SUCCESS;
+}
