@@ -1,58 +1,102 @@
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <string>
+#include <stdexcept>
 
-class Exercise04:
+using std::string, std::map, std::pair;
 
-    """List 01, Exercise04."""
+/**
+ * List 01, Exercise04.
+ */
+class Exercise04
+{
 
-    def getDiscount(self, value):
-        discount = value * 0.05
+    private:
+        const map<string, float>* getDiscount(float);
 
-        return {
-            "gross"   : value,
-            "discount": discount,
-            "liquid"  : value - discount
+        const map<string, float>* getAddition(float);
+
+    public:
+        void doExercise(void);
+};
+
+const map<string, float>* Exercise04::getDiscount(float value)
+{
+    float discount = value * 0.05;
+
+    map<string, float>* map = new std::map<string, float>();
+
+    map->insert(pair<string, float>("gross", value));
+    map->insert(pair<string, float>("discount", discount));
+    map->insert(pair<string, float>("liquid", value - discount));
+
+    return map;
+}
+
+const map<string, float>* Exercise04::getAddition(float value)
+{
+    float addition = value * 0.07;
+
+    map<string, float>* map = new std::map<string, float>();
+
+    map->insert(pair<string, float>("gross", value));
+    map->insert(pair<string, float>("addition", addition));
+    map->insert(pair<string, float>("liquid", value + addition));
+
+    return map;
+}
+
+void Exercise04::doExercise(void)
+{
+    float value { 0.0f };
+
+    try
+    {
+        std::cout << "Valor: ";
+        std::cin >> value;
+
+        if ( value < 0 )
+        {
+            throw std::runtime_error("Valor inválido!");
         }
+    }
+    catch ( const std::exception& e )
+    {
+        std::cerr << e.what() << '\n';
+    }
 
-    def getAddition(self, value):
-        addition = value * 0.07
+    if ( value < 100 )
+    {
+        auto values = this->getDiscount(value);
 
-        return {
-            "gross"   : value,
-            "addition": addition,
-            "liquid"  : value + addition
-        }
+        std::cout
+            << "\nValor Bruto....: R$ " << std::setprecision(4) << values->at("gross")
+            << "\nValor Líquido..: R$ " << std::setprecision(4) << values->at("liquid")
+            << "\nDesconto.......: R$ " << std::setprecision(4) << values->at("discount")
+            << '\n'
+        ;
 
-    def do(self):
-        try:
-            value = float(input("Valor: "))
-        except Exception as e:
-            print("A entrada informada trata-se de um valor inválido.")
-        else:
-            if value < 100:
-                values = self.getDiscount(value)
+        delete values;
+    }
+    else
+    {
+        auto values = this->getAddition(value);
 
-                print(
-                    "\nValor Bruto....: R$ {:.2f}"
-                    "\nValor Líquido..: R$ {:.2f}"
-                    "\nDesconto.......: R$ {:.2f}"
-                    .format(
-                        values["gross"],
-                        values["liquid"],
-                        values["discount"]
-                    )
-                )
-            else:
-                values = self.getAddition(value)
+        std::cout
+            << "\nValor Bruto....: R$ " << std::setprecision(4) << values->at("gross")
+            << "\nValor Líquido..: R$ " << std::setprecision(4) << values->at("liquid")
+            << "\nAcréscimo......: R$ " << std::setprecision(4) << values->at("addition")
+            << '\n'
+        ;
 
-                print(
-                    "\nValor Bruto....: R$ {:.2f}"
-                    "\nValor Líquido..: R$ {:.2f}"
-                    "\nAcréscimo......: R$ {:.2f}"
-                    .format(
-                        values["gross"],
-                        values["liquid"],
-                        values["addition"]
-                    )
-                )
+        delete values;
+    }
+}
 
-if __name__ == '__main__':
-    Exercise04.do()
+int main(void)
+{
+    Exercise04().doExercise();
+
+    return 0;
+}
