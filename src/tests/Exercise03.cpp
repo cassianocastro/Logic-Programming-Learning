@@ -1,32 +1,65 @@
+#include "./Exercises.hpp"
 
-class Exercise03:
+float Tests::Exercise03::getDiscountBy(char sex, float value)
+{
+    if ( sex == 'm' )
+    {
+        return value * 0.1;
+    }
 
-    """List 01, Exercise03."""
+    return value * 0.15;
+}
 
-    def getDiscountBy(self, sex, value):
-        if sex.startswith('m'):
-            return value * 0.1
+float Tests::Exercise03::getValue(void)
+{
+    float value { 0.0f };
 
-        return value * 0.15
+    std::cout << "Valor da Compra: ";
+    std::cin >> value;
 
-    def do(self):
-        sex = '\0'
+    if ( value < 0 )
+    {
+        throw std::runtime_error("Valor de compra inválido!");
+    }
 
-        try:
-            value = float(input("Valor da Compra: "))
-            sex   = input("Sexo: ")
-        except Exception as e:
-            print("O valor de compra é inválido!!")
-        else:
-            while ( not sex.startswith('m') and not sex.startswith('f') ):
-                sex = input("Sexo inválido!! Digite novamente: ").lower()
+    return value;
+}
 
-            discount = self.getDiscountBy(sex, value)
-            print(
-                f"\nValor Bruto....: R$ {value:.2f}"
-                f"\nValor Líquido..: R$ {value - discount:.2f}"
-                f"\nDesconto.......: R$ {discount:.2f}"
-            )
+char Tests::Exercise03::getSex(void)
+{
+    char sex { '\0' };
 
-if __name__ == '__main__':
-    Exercise03.do()
+    std::cout << "Sexo: ";
+    std::cin >> sex;
+
+    while ( sex not_eq 'm' and sex not_eq 'f' )
+    {
+        std::clog << "Sexo inválido! Digite novamente: ";
+        std::cin >> sex;
+
+        sex = std::tolower(sex);
+    }
+
+    return sex;
+}
+
+void Tests::Exercise03::doExercise(void)
+{
+    try
+    {
+        char sex       = this->getSex();
+        float value    = this->getValue();
+        float discount = this->getDiscountBy(sex, value);
+
+        std::cout
+            << "\nValor Bruto....: R$ " << std::setprecision(4) << value
+            << "\nValor Líquido..: R$ " << std::setprecision(4) << value - discount
+            << "\nDesconto.......: R$ " << std::setprecision(4) << discount
+            << '\n'
+        ;
+    }
+    catch ( const std::exception& e )
+    {
+        std::cerr << e.what() << '\n';
+    }
+}
