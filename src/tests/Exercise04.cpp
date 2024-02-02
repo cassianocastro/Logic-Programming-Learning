@@ -1,27 +1,8 @@
-#include <iomanip>
-#include <iostream>
-#include <map>
-#include <string>
-#include <stdexcept>
+#include "./Exercises.hpp"
 
 using std::string, std::map, std::pair;
 
-/**
- * List 01, Exercise04.
- */
-class Exercise04
-{
-
-    private:
-        const map<string, float>* getDiscount(float);
-
-        const map<string, float>* getAddition(float);
-
-    public:
-        void doExercise(void);
-};
-
-const map<string, float>* Exercise04::getDiscount(float value)
+const map<string, float>* Tests::Exercise04::getDiscount(float value)
 {
     float discount = value * 0.05;
 
@@ -34,7 +15,7 @@ const map<string, float>* Exercise04::getDiscount(float value)
     return map;
 }
 
-const map<string, float>* Exercise04::getAddition(float value)
+const map<string, float>* Tests::Exercise04::getAddition(float value)
 {
     float addition = value * 0.07;
 
@@ -47,7 +28,7 @@ const map<string, float>* Exercise04::getAddition(float value)
     return map;
 }
 
-void Exercise04::doExercise(void)
+void Tests::Exercise04::doExercise(void)
 {
     float value { 0.0f };
 
@@ -92,11 +73,4 @@ void Exercise04::doExercise(void)
 
         delete values;
     }
-}
-
-int main(void)
-{
-    Exercise04().doExercise();
-
-    return 0;
 }
