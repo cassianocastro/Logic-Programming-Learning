@@ -1,26 +1,26 @@
+#include "./Exercises.hpp"
 
-class Exercise02:
+float Tests::Exercise02::celsiusToFarenheit(float celsius)
+{
+    return celsius * 1.8 + 32;
+}
 
-    """List 01, Exercise 02."""
+float Tests::Exercise02::celsiusToKelvin(float celsius)
+{
+    return celsius + 273.15;
+}
 
-    def celsiusToFarenheit(self, celsius):
-        return (celsius * 1.8) + 32
+void Tests::Exercise02::doExercise(void)
+{
+    float celsius = 0.0f;
 
-    def celsiusToKelvin(self, celsius):
-        return celsius + 273.15
+    std::cout << "Temperatura em Graus Celsius: ";
+    std::cin >> celsius;
 
-
-    def do(self):
-        try:
-            celsius = float(input("Temperatura em Graus Celsius: "))
-        except Exception as e:
-            print("A entrada informada trata-se de um valor inválido.")
-        else:
-            print(
-                "A temperatura em..."
-                f"\nGraus Farenheit..: {self.celsiusToFarenheit(celsius):.2f}"
-                f"\nGraus Kelvin.....: {self.celsiusToKelvin(celsius):.2f}"
-            )
-
-if __name__ == '__main__':
-    Exercise02.do()
+    std::cout
+        << "A temperatura em..."
+        << "\nGraus Farenheit..: " << std::setprecision(4) << this->celsiusToFarenheit(celsius)
+        << "\nGraus Kelvin.....: " << std::setprecision(4) << this->celsiusToKelvin(celsius)
+        << '\n';
+    ;
+}
