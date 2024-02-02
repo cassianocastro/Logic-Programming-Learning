@@ -1,21 +1,6 @@
-#include <cstdlib>
-#include <iomanip>
-#include <iostream>
-#include <stdexcept>
+#include "./Exercises.hpp"
 
-/**
- * List 01, Exercise 01.
- */
-class Exercise01
-{
-
-    public:
-        float getDolars(float, float);
-
-        void doExercise(void);
-};
-
-float Exercise01::getDolars(float cotacao, float value)
+float Tests::Exercise01::getDolars(float cotacao, float value)
 {
     if ( cotacao == 0.0f )
     {
@@ -25,7 +10,7 @@ float Exercise01::getDolars(float cotacao, float value)
     return value / cotacao;
 }
 
-void Exercise01::doExercise(void)
+void Tests::Exercise01::doExercise(void)
 {
     float cotacao = 0.0f, value = 0.0f;
 
@@ -45,14 +30,4 @@ void Exercise01::doExercise(void)
     {
         std::cerr << e.what() << '\n';
     }
-}
-
-/**
- *
- */
-int main(void)
-{
-    Exercise01().doExercise();
-
-    return EXIT_SUCCESS;
 }
