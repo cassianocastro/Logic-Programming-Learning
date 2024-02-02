@@ -2,7 +2,9 @@
 
 #include <iomanip>
 #include <iostream>
+#include <map>
 #include <stdexcept>
+#include <string>
 
 namespace Tests
 {
@@ -78,6 +80,21 @@ namespace Tests
             /**
              *
              */
+            void doExercise(void);
+    };
+
+    /**
+     * List 01, Exercise04.
+     */
+    class Exercise04
+    {
+
+        private:
+            const map<string, float>* getDiscount(float);
+
+            const map<string, float>* getAddition(float);
+
+        public:
             void doExercise(void);
     };
 }
