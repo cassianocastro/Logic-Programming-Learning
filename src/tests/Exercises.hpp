@@ -10,7 +10,7 @@ namespace Tests
 {
 
     /**
-     * List 01, Exercise 01.
+     * List 01, Exercise 01
      */
     class Exercise01
     {
@@ -29,7 +29,7 @@ namespace Tests
     };
 
     /**
-     * List 01, Exercise 02.
+     * List 01, Exercise 02
      */
     class Exercise02
     {
@@ -53,7 +53,7 @@ namespace Tests
     };
 
     /**
-     * List 01, Exercise03.
+     * List 01, Exercise03
      */
     class Exercise03
     {
@@ -84,17 +84,48 @@ namespace Tests
     };
 
     /**
-     * List 01, Exercise04.
+     * List 01, Exercise04
      */
     class Exercise04
     {
 
         private:
-            const map<string, float>* getDiscount(float);
+            /**
+             *
+             */
+            const std::map<std::string, float>* getDiscount(float);
 
-            const map<string, float>* getAddition(float);
+            /**
+             *
+             */
+            const std::map<std::string, float>* getAddition(float);
 
         public:
+
+            /**
+             *
+             */
+            void doExercise(void);
+    };
+
+    /**
+     * List 01, Exercise05
+     */
+    class Exercise05
+    {
+
+        private:
+
+            /**
+             *
+             */
+            std::string getShift(int);
+
+        public:
+
+            /**
+             *
+             */
             void doExercise(void);
     };
 }
