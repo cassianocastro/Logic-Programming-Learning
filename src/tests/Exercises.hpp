@@ -50,4 +50,34 @@ namespace Tests
             void doExercise(void);
     };
 
+    /**
+     * List 01, Exercise03.
+     */
+    class Exercise03
+    {
+
+        private:
+
+            /**
+             *
+             */
+            float getDiscountBy(char, float);
+
+            /**
+             *
+             */
+            float getValue(void);
+
+            /**
+             *
+             */
+            char getSex(void);
+
+        public:
+
+            /**
+             *
+             */
+            void doExercise(void);
+    };
 }
