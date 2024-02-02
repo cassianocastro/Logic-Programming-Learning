@@ -1,25 +1,39 @@
+#include "./Exercises.hpp"
 
-class Exercise05:
+using std::string;
 
-    """List 01, Exercise05."""
+string Tests::Exercise05::getShift(int serie)
+{
+    if ( serie >= 1 and serie <= 4 )
+    {
+        return string("Turno da Manhã.");
+    }
+    else if ( serie >= 5 and serie <= 8 )
+    {
+        return string("Turno da Tarde.");
+    }
 
-    def getShift(self, serie: int):
-        if serie >= 1 and serie <= 4:
-            return "Turno da Manhã."
-        elif serie >= 5 and serie <= 8:
-            return "Turno da Tarde."
+    return string("Dígito inválido!");
+}
 
-        return "Dígito inválido!!"
+void Tests::Exercise05::doExercise(void)
+{
+    try
+    {
+        int serie { 0 };
 
-    def do(self):
-        serie = input("Informe o número da série (Somente de 1-8): ")
+        std::cout << "Informe o número da série (Somente de 1-8): ";
+        std::cin >> serie;
 
-        try:
-            serie = int(serie)
-        except Exception:
-            print("A entrada informada não é um número inteiro.")
-        else:
-            print(self.getShift(serie))
+        if ( std::cin.fail() )
+        {
+            throw std::invalid_argument("A entrada não é um número inteiro.");
+        }
 
-if __name__ == '__main__':
-    Exercise05.do()
+        std::cout << this->getShift(serie) << '\n';
+    }
+    catch ( const std::invalid_argument& e )
+    {
+        std::cerr << e.what() << '\n';
+    }
+}
