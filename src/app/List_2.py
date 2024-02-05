@@ -1,239 +1,402 @@
-def exercicio01():
-	primeiro_numero = 0
-	segundo_numero  = 0
-	resto = 0
+#include <array>
+#include <functional>
+#include <iostream>
+#include <iomanip>
+#include <map>
+#include <string>
+#include <utility>
 
-	primeiro_numero = int(input("Digite um número: "))
-	segundo_numero  = int(input("Outro número: "))
+using std::cin, std::cout, std::cerr;
 
-	if primeiro_numero > segundo_numero:
-		resto = primeiro_numero % segundo_numero
-		if resto == 0:
-			print("O primeiro número digitado é o maior e é par.")
-		else:
-			print("O primeiro número digitado é o maior e ímpar.")
-	else:
-		resto = segundo_numero % 2
-		if resto == 0:
-			print("O segundo número é o maior e é par.")
-		else:
-			print("O segundo número é o maior e é ímpar.")
+void exercicio01(void)
+{
+	int x { 0 }, y { 0 };
 
-	print("Fim.")
+    cout << "Digite um número: ";
+	cin >> x;
 
-def exercicio03():
-	cargos = {
-		1 : "Gerente",
-		2 : "Supervisor",
-		3 : "Contador",
-		4 : "Digitador",
-		5 : "Auxiliar Administrativo"
-	}
-	while True:
-		codigo = int(input("Informe o código do funcionário: "))
+    cout << "Outro número: ";
+	cin >> y;
 
-		if codigo >= 1 and codigo <= 5:
-			print("Cargo selecionado: {}" .format( cargos[codigo] ))
-		elif codigo == 0:
-			break
-		else:
-			print("Dígito inválido!!")
+	if ( x > y )
+    {
+        cout << "O primeiro número é o maior e é " << ( x % y == 0 ) ? "par" : "ímpar";
+    }
+	else
+    {
+        cout << "O segundo número é o maior e é " << ( y % 2 == 0 ) ? "par" : "ímpar";
+    }
 
-def exercicio04():
-	while True:
-		numero = int(input("Informe o número de classificação: "))
+    cout << '\n';
+}
 
-		if numero == 0:
-			break
-		elif numero == 1 or numero == 2:
-			print("Primeira Fila.")
-		elif numero == 3 or numero == 4:
-			print("Segunda Fila.")
-		elif numero == 5 or numero == 6:
-			print("Terceira Fila.")
-		elif numero == 7 or numero == 8:
-			print("Quarta Fila.")
-		elif numero == 9 or numero == 10:
-			print("Quinta Fila.")
-		elif numero > 10:
-			print("Sexta Fila em diante.")
+void exercicio03(void)
+{
+    std::array<std::string, 5> offices = { "Gerente", "Supervisor", "Contador", "Digitador", "Auxiliar Administrativo" };
 
-def exercicio05():
-	while True:
-		sexo = input("Informe seu sexo ou tecle <s> para sair: ").capitalize()
+	int code { 0 };
 
-		while not sexo.startswith("F") and not sexo.startswith("M") and not sexo.startswith("S"):
-			sexo = input("Opção inválida. Digite novamente: ").capitalize()
+    while ( true )
+    {
+        cout << "Informe o código do funcionário: ";
+        cin >> code;
 
-		if not sexo.startswith("S"):
-			idade = input("Idade: ")
-			idade = int(idade)
+        if ( code == 0 )
+        {
+			break;
+        }
 
-			if sexo.startswith("F"):
-				if idade >= 18:
-					print("Pode ter um automóvel rosa.")
-				else:
-					print("Pode ter uma bicicleta rosa.")
-			else:
-				if idade >= 18:
-					print("Pode ter um automóvel azul.")
-				else:
-					print("Pode ter uma bicicleta azul.")
-		else:
-			break
+		if ( code >= 1 and code <= 5 )
+        {
+			cout << "Cargo selecionado: " << offices.at(code - 1);
+        }
+		else
+        {
+			cout << "Dígito inválido!";
+        }
+    }
+}
 
-def exercicio06():
-	opcao = 's'
-	while opcao.startswith("s"):
-		altura = float(input("Informe sua altura: "))
-		sexo   = input("Seu sexo: ").capitalize()
+void exercicio04(void)
+{
+    int number { 0 };
 
-		while not sexo.startswith("M") and not sexo.startswith("F"):
-			sexo = input("Sexo inválido. Digite novamente: ").capitalize()
+	while ( true )
+    {
+        cout << "Informe o número de classificação: ";
+		cin >> number;
 
-		if sexo[0] == 'M':
-			peso = ( 72.7 * altura ) - 58
-		else:
-			peso = ( 62.1 * altura ) - 44.7
-		print(f"Seu peso ideal é de: {peso:.2f} Kg")
+		if ( number == 0 )
+        {
+			return;
+        }
 
-		opcao = input("Deseja realizar novamente [s/n]? ").lower()
+        switch ( number )
+        {
+            case 1:
+            case 2:
+                cout << "Primeira fila\n";
+                break;
+            case 3:
+            case 4:
+                cout << "Segunda fila\n";
+                break;
+            case 5:
+            case 6:
+                cout << "Terceira fila\n";
+                break;
+            case 7:
+            case 8:
+                cout << "Quarta fila\n";
+                break;
+            case 9:
+            case 10:
+                cout << "Quinta fila\n";
+                break;
+            default:
+                cout << "Sexta fila em diante\n";
+        }
+    }
+}
 
-		while not opcao.startswith("s") and not opcao.startswith("n"):
-			opcao = input("Opção inválida. Digite novamente: ").lower()
+void exercicio05(void)
+{
+    char sex { '\0' };
 
-def exercicio07():
-	def soma( primeiro_numero, segundo_numero ):
-		return primeiro_numero + segundo_numero
+	while ( true )
+    {
+        cout << "Informe seu sexo ou tecle <s> para sair: ";
+		cin >> sex;
 
-	def subtracao( primeiro_numero, segundo_numero ):
-		return primeiro_numero - segundo_numero
+        sex = std::toupper(sex);
 
-	def multiplicacao( primeiro_numero, segundo_numero ):
-		return primeiro_numero * segundo_numero
+		while ( sex not_eq 'F' and sex not_eq 'M' and sex not_eq 'S' )
+        {
+            cout << "Opção inválida. Digite novamente: ";
+            cin >> sex;
 
-	def divisao( primeiro_numero, segundo_numero ):
-		try:
-			quociente = primeiro_numero / segundo_numero
-		except( ZeroDivisionError ):
-			print("Impossível dividir por Zero.")
-		else:
-			return quociente
+			sex = std::toupper(sex);
+        }
 
-	opcoes = {
-		1 : soma,
-		2 : subtracao,
-		3 : multiplicacao,
-		4 : divisao
-	}
-	while True:
-		opcao_escolhida = int( input(
-			"Escolha uma das opções abaixo:"
+		if ( sex == 'S' )
+        {
+            return;
+        }
+
+        int age { 0 };
+
+        cout << "Idade: ";
+        cin >> age;
+
+        if ( age >= 18 )
+            cout << "Pode ter um automóvel " << ( sex == 'F' ) ? "rosa" : "azul";
+        else
+            cout << "Pode ter uma bicicleta " << ( sex == 'F' ) ? "rosa" : "azul";
+    }
+}
+
+void exercicio06(void)
+{
+	char option { 's' }, sex { '\0' };
+
+    float altura { 0.0f }, peso { 0.0f };
+
+	while ( option == 's' )
+    {
+        cout << "Informe sua altura: ";
+		cin >> altura;
+
+        cout << "Seu sexo: ";
+        cin >> sex;
+
+		sex = std::toupper(sex);
+
+		while ( sex not_eq 'M' and sex not_eq 'F' )
+        {
+            cout << "Sexo inválido. Digite novamente: ";
+			cin >> sex;
+
+            sex = std::toupper(sex);
+        }
+
+		if ( sex == 'M' )
+			peso = (72.7 * altura) - 58;
+		else
+			peso = (62.1 * altura) - 44.7;
+
+        cout << "Seu peso ideal é de: " << std::setprecision(4) << peso << " Kg\n";
+
+        cout << "Deseja realizar novamente [s/n]\? ";
+        cin >> option;
+
+		option = std::tolower(option);
+
+		while ( option not_eq 's' and not option not_eq 'n' )
+        {
+            cout << "Opção inválida. Digite novamente: ";
+            cin >> option;
+
+			option = std::tolower(option);
+        }
+    }
+}
+
+void exercicio07(void)
+{
+    std::map<int, std::function<int (int, int)>> options =
+    {
+        std::pair<int, std::function<int (int, int)>>(1, [](int x, int y){ return x + y; }),
+
+        std::pair<int, std::function<int (int, int)>>(2, [](int x, int y){ return x - y; }),
+
+        std::pair<int, std::function<int (int, int)>>(3, [](int x, int y){ return x * y; }),
+
+        std::pair<int, std::function<int (int, int)>>(4, [](int x, int y){
+            if ( y == 0 )
+            {
+                throw std::runtime_error("Error: division by 0");
+            }
+
+            return x / y;
+        })
+    };
+
+    int option { 0 }, x { 0 }, y { 0 };
+
+	while ( true )
+    {
+        cout <<
+			"\nEscolha uma das opções abaixo:"
 			"\n1. Soma | 2. Subtração | 3. Multiplicação | 4. Divisão"
-			"\nOpção? "
-		))
+			"\nOpção\? "
+		;
+		cin >> option;
 
-		while opcao_escolhida > 4:
-			opcao_escolhida = int(input(
-				"Opção inválida. Digite novamente: "
-			))
+		while ( option > 4 )
+        {
+            cout << "Opção inválida. Digite novamente: ";
+            cin >> option;
+        }
 
-		if opcao_escolhida != 0:
-			primeiro_numero = float(input("Primeiro Número: "))
-			segundo_numero  = float(input("Segundo Número: "))
+		if ( option == 0 )
+        {
+            break;
+        }
 
-			retorno = opcoes[ opcao_escolhida ]( primeiro_numero, segundo_numero )
-			if retorno != None:
-				print(f"Resultado: {retorno:.2f}")
-			else:
-				print("Resultado: Nulo")
-		else:
-			break
+        cout << "Primeiro Número: ";
+        cin >> x;
 
-def exercicio08():
-	while True:
-		idade = int(input("Informe a idade o nadador ou <0> para sair: "))
+        cout << "Segundo Número: ";
+        cin >> y;
 
-		while idade < 0:
-			idade = int(input("Idade inválida. Digite novamente: "))
+        try
+        {
+            auto result = options.at(option)(x, y);
 
-		if idade != 0:
-			if idade >= 1 and idade <= 4:
-				print("Idade insuficiente.")
-			elif idade >= 5 and idade <= 7:
-				print("Infantil A.")
-			elif idade >= 8 and idade <= 10:
-				print("Infantil B.")
-			elif idade >= 11 and idade <= 13:
-				print("Juvenil A.")
-			elif idade >= 14 and idade <= 17:
-				print("Juvenil B.")
-			else:
-				print("Sênior.")
-		else:
-			break
+            cout << "Resultado: " << std::setprecision(4) << result << '\n';
+        }
+        catch ( const std::runtime_error& e )
+        {
+            cerr << e.what() << '\n';
+        }
+    }
+}
 
-def exercicio09():
-	idade  = int(input("Idade: "))
-	codigo = int(input("Código: "))
+void exercicio08(void)
+{
+    int idade { 0 };
 
-	while idade < 18 and idade > 70:
-		idade = int(input("Dígito inválido. Digite novamente: "))
+	while ( true )
+    {
+        cout << "Informe a idade o nadador ou <0> para sair: ";
+		cin >> idade;
 
-	if idade >= 18 and idade <= 24:
-		if codigo < 7 or codigo > 9:
-			print("Código inválido.")
-		else:
-			if codigo == 7:
-				print("Grupo Baixo.")
-			elif codigo == 8:
-				print("Grupo Médio.")
-			else:
-				print("Grupo Alto.")
-	elif idade >= 25 and idade <= 40:
-		if codigo < 4 or codigo > 6:
-			print("Código inválido.")
-		else:
-			if codigo == 4:
-				print("Grupo Baixo.")
-			elif codigo == 5:
-				print("Grupo Médio.")
-			else:
-				print("Grupo Alto.")
-	else:
-		if codigo < 1 or codigo > 3:
-			print("Código inválido.")
-		else:
-			if codigo == 1:
-				print("Grupo Baixo.")
-			elif codigo == 2:
-				print("Grupo Médio.")
-			else:
-				print("Grupo Alto.")
+		while ( idade < 0 )
+        {
+            cout << "Idade inválida. Digite novamente: ";
+			cin >> idade;
+        }
 
-def exercicio010():
-	mes = int(input("Mês: "))
+		if ( idade == 0 )
+        {
+            break;
+        }
 
-	while mes < 1 or mes > 12:
-		mes = int(input("Mês: "))
+        if ( idade >= 1 and idade <= 4 )
+        {
+            cout << "Idade insuficiente.\n";
+        }
+        else if ( idade >= 5 and idade <= 7 )
+        {
+            cout << "Infantil A.\n";
+        }
+        else if ( idade >= 8 and idade <= 10 )
+        {
+            cout << "Infantil B.\n";
+        }
+        else if ( idade >= 11 and idade <= 13 )
+        {
+            cout << "Juvenil A.\n";
+        }
+        else if ( idade >= 14 and idade <= 17 )
+        {
+            cout << "Juvenil B.\n";
+        }
+        else
+        {
+            cout << "Sênior.\n";
+        }
+    }
+}
 
-	if mes == 1 or mes == 2:
-		print("É Verão.")
-	elif mes == 4 or mes == 5:
-		print("É Outono.")
-	elif mes == 7 or mes == 8:
-		print("É Inverno.")
-	elif mes == 10 or mes == 11:
-		print("É Primavera.")
-	else:
-		dia = int(input("Dia: "))
-		if mes == 3:
-			print("É Verão."     if dia < 21 else "É Outono.")
-		elif mes == 6:
-			print("É Outono."    if dia < 21 else "É Inverno.")
-		elif mes == 9:
-			print("É Inverno."   if dia < 23 else "É Primavera.")
-		else:
-			print("É Primavera." if dia < 21 else "É Verão.")
+void exercicio09(void)
+{
+    int codigo { 0 }, idade { 0 };
 
-exercicio010()
+    cout << "Idade: ";
+	cin >> idade;
+
+    cout << "Código: ";
+	cin >> codigo;
+
+	while ( idade < 18 and idade > 70 )
+    {
+        cout << "Dígito inválido. Digite novamente: ";
+		cin >> idade;
+    }
+
+	if ( idade >= 18 and idade <= 24 )
+    {
+		if ( codigo < 7 or codigo > 9 )
+        {
+			cout << "Código inválido.";
+        }
+		else
+        {
+			if ( codigo == 7 )
+				cout << "Grupo Baixo.";
+			else if ( codigo == 8 )
+				cout << "Grupo Médio.";
+			else
+				cout << "Grupo Alto.";
+        }
+    }
+	else if ( idade >= 25 and idade <= 40 )
+    {
+		if ( codigo < 4 or codigo > 6 )
+        {
+			cout << "Código inválido.";
+        }
+		else
+        {
+			if ( codigo == 4 )
+				cout << "Grupo Baixo.";
+			else if ( codigo == 5 )
+				cout << "Grupo Médio.";
+			else
+				cout << "Grupo Alto.";
+        }
+    }
+	else
+    {
+		if ( codigo < 1 or codigo > 3 )
+        {
+			cout << "Código inválido.";
+        }
+		else
+        {
+			if ( codigo == 1 )
+				cout << "Grupo Baixo.";
+			else if ( codigo == 2 )
+				cout << "Grupo Médio.";
+			else
+				cout << "Grupo Alto.";
+        }
+    }
+}
+
+void exercicio010(void)
+{
+	int month { 0 };
+
+    cout << "Mês: ";
+    cin >> month;
+
+	while ( month < 1 or month > 12 )
+    {
+        cout << "Mês: ";
+		cin >> month;
+    }
+
+	if ( month == 1 or month == 2 )
+		cout << "Verão.";
+	else if ( month == 4 or month == 5 )
+		cout << "Outono.";
+	else if ( month == 7 or month == 8 )
+		cout << "Inverno.";
+	else if ( month == 10 or month == 11 )
+		cout << "Primavera.";
+	else
+    {
+		int day { 0 };
+
+        cout << "Dia: ";
+        cin >> day;
+
+		if ( month == 3 )
+			cout << ( day < 21 ) ? "Verão" : "Outono";
+		else if ( month == 6 )
+			cout << ( day < 21 ) ? "Outono" : "Inverno";
+		else if ( month == 9 )
+			cout << ( day < 23 ) ? "Inverno" : "Primavera";
+		else
+			cout << ( day < 21 ) ? "Primavera" : "Verão";
+    }
+}
+
+int main(void)
+{
+    exercicio07();
+
+    return 0;
+}
