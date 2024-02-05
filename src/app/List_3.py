@@ -1,185 +1,310 @@
-def exercicio01():
-	horas_normais = float(
-		input("Informe a quantidade de horas trabalhadas: ")
-	)
-	horas_extras  = float(
-		input("Qtde de horas extras: ")
-	)
-	horas_normais *= 20
-	horas_extras  *= 25
-	salario = horas_normais + horas_extras
-	print(f"Salário total: R$ {salario:.2f}.")
+#include <functional>
+#include <iostream>
+#include <iomanip>
+#include <map>
 
-def exercicio02():
-	metragemParede = float(
-		input("Tamanho da parede(em metros quadrados): ")
-	)
+using std::cin, std::cout, std::clog;
 
-	tipoTijolo = int(
-		input(
-			"Informe o tipo de Tijolo a ser utilizado:\n"
-			"1. 6 furos | 2. 4 furos | 3. Maciços\n"
-			"Tipo? "
-		)
-	)
-	while tipoTijolo < 1 or tipoTijolo > 3:
-		tipoTijolo = int(
-			input("Tipo inválido. Somente dígitos de 1 a 3: ")
-		)
+void exercicio01()
+{
+    float hours { 0.0f }, extra { 0.0f };
 
-	if tipoTijolo == 1:
-		totalTijolos = metragemParede * 15
-	elif tipoTijolo == 2:
-		totalTijolos = metragemParede * 25
-	else:
-		totalTijolos = metragemParede * 30
+	cout << "Informe a quantidade de horas trabalhadas: ";
+	cin >> hours;
 
-	print(f"Total de tijolos necessários: {totalTijolos:.2f} por metro quadrado.")
+	cout << "Qtde de horas extras: ";
+	cin >> extra;
 
-def exercicio03():
-	idadeANO = int(input("Idade em anos: "))
-	idadeMES = int(input("Quantos meses: "))
-	idadeDIA = int(input("E qtos dias: "))
+	hours *= 20;
+	extra *= 25;
 
-	idadeANO *= 365
-	idadeMES *= 30
+	cout << "Salário total: R$ " << std::setprecision(4) << hours + extra << '\n';
+}
 
-	totalDias = idadeANO + idadeMES + idadeDIA
-	print(f"Total de Dias vividos: {totalDias}")
+void exercicio02()
+{
+    float metragem { 0.0f }, total { 0.0f };
 
-def exercicio04():
-	idadeDIA = int(input("Idade em dias: "))
+    cout << "Tamanho da parede(em metros quadrados): ";
+	cin >> metragem;
 
-	anos  = idadeDIA // 365
-	meses = (idadeDIA % 365) // 30
-	dias  = (idadeDIA % 365) % 30
+    int tipo { 0 };
 
-	print(f"Você tem {anos} anos, {meses} mes(es) e {dias} dia(s).")
+    cout <<
+        "\nInforme o tipo de Tijolo a ser utilizado:"
+        "\n1. 6 furos | 2. 4 furos | 3. Maciços"
+        "\nTipo\? "
+    ;
+	cin >> tipo;
 
-def exercicio05():
-	def calcularPreco(codigo, qtde):
-		if   codigo == 10: return qtde * 2.5
-		elif codigo == 11: return qtde * 6
-		elif codigo == 12: return qtde * 6.5
-		elif codigo == 13: return qtde * 5
-		elif codigo == 14: return qtde * 5.5
-		else: return qtde * 2
+	while ( tipo < 1 or tipo > 3 )
+    {
+		cout << "Tipo inválido. Somente dígitos de 1 a 3: ";
+		cin >> tipo;
+    }
 
-	especificacao = {
-		10: "Cachorro Quente",
-		11: "Bauru Simples",
-		12: "Bauru com Ovo",
-		13: "Hambúrguer",
-		14: "Cheeseburguer",
-		15: "Refrigerante"
-	}
-	while True:
-		codigo = int(input("Código do produto ou ZERO para sair: "))
+	if ( tipo == 1 )
+		total = metragem * 15;
+	else if ( tipo == 2 )
+		total = metragem * 25;
+	else
+		total = metragem * 30;
 
-		if codigo == 0:
-			break
-		elif codigo < 10 or codigo > 15:
-			print("Código inválido.")
-		else:
-			quantidade = int(input("Quantidade: "))
-			preco 	   = calcularPreco(codigo, quantidade)
-			print(
-				f"\nCódigo do Pedido: {codigo}"
-				f"\nEspecificação: {especificacao[codigo]}"
-				f"\nQuantidade do item: {quantidade}"
-				f"\nPreço total: R$ {preco:.2f}\n\n"
-			)
+	cout << "Total de tijolos necessários: " << std::setprecision(4) << total << " por metro quadrado.\n";
+}
 
-def exercicio06():
-	valorFrete = 0
-	valorEncomenda = float(
-		input("Valor da encomenda: ")
-	)
-	distanciaPercorrida = float(
-		input("Informe a distância percorrida: ")
-	)
-	if distanciaPercorrida > 0 and distanciaPercorrida <= 100:
-		valorFrete = valorEncomenda * 0.2
-	elif distanciaPercorrida >= 101 and distanciaPercorrida <= 300:
-		valorFrete = valorEncomenda * 0.17
-	elif distanciaPercorrida >= 301 and distanciaPercorrida <= 500:
-		valorFrete = valorEncomenda * 0.15
-	elif distanciaPercorrida >= 501 and distanciaPercorrida <= 1000:
-		valorFrete = valorEncomenda * 0.13
-	elif distanciaPercorrida > 1000:
-		valorFrete = valorEncomenda * 0.1
+void exercicio03()
+{
+    unsigned int idadeDIA { 0 }, idadeMES { 0 }, idadeANO { 0 };
 
-	print(f"O valor do frete é: R$ {valorFrete:.2f}.")
+    cout << "Idade em anos: ";
+	cin >> idadeANO;
 
-def exercicio07():
-	valorReais = int(input("Valor em R$: "))
+    cout << "Quantos meses: ";
+	cin >> idadeMES;
 
-	notas100  = valorReais // 100
-	diferenca = valorReais - ( notas100 * 100 )
-	print(f"{notas100} nota(s) de 100 reais.")
+    cout << "E qtos dias: ";
+	cin >> idadeDIA;
 
-	notas50   = diferenca // 50
-	diferenca -= ( notas50 * 50 )
-	print(f"{notas50} nota(s) de 50 reais.")
+	idadeANO *= 365;
+	idadeMES *= 30;
 
-	notas10   = diferenca // 10
-	diferenca -= ( notas10 * 10 )
-	print(f"{notas10} nota(s) de 10 reais.")
+	cout << "Total de dias vividos: " << idadeANO + idadeMES + idadeDIA << '\n';
+}
 
-	notas5    = diferenca // 5
-	diferenca -= ( notas5 * 5 )
-	print(f"{notas5} nota(s) de 5 reais.")
+void exercicio04()
+{
+    int idadeDIA { 0 };
 
-	notas1    = diferenca // 1
-	print(f"{notas1} nota(s) de 1 real.")
+    cout << "Idade em dias: ";
+	cin >> idadeDIA;
 
-def exercicio08():
-	def retangulo():
-		base   = float(input("Base: "))
-		altura = float(input("Altura: "))
-		return base * altura
+	int anos  = idadeDIA / 365;
+	int meses = idadeDIA % 365 / 30;
+	int dias  = (idadeDIA % 365) % 30;
 
-	def triangulo():
-		base   = float(input("Base: "))
-		altura = float(input("Altura: "))
-		return ( base * altura ) / 2
+	cout
+        << "Você tem "
+        << anos  << " anos, "
+        << meses << " mes(es) e "
+        << dias  << " dia(s).\n"
+    ;
+}
 
-	def circulo():
-		PI   = 3.14
-		raio = float(input("Raio: "))
-		return PI * raio**2
+float calcularPreco(int code, int qtde)
+{
+    if ( code == 10 ) return qtde * 2.5;
+    else if ( code == 11 ) return qtde * 6;
+    else if ( code == 12 ) return qtde * 6.5;
+    else if ( code == 13 ) return qtde * 5;
+    else if ( code == 14 ) return qtde * 5.5;
+    else return qtde * 2;
+}
 
-	opcoes = { 1: retangulo,
-			   2: triangulo,
-			   3: circulo }
-	while True:
-		opcao = int(
-			input("\nCalcular a área do:"
-				  "\n1. Retângulo | 2. Triângulo | 3. Círculo | 0.Sair"
-				  "\nOpção? ")
-		)
+void exercicio05()
+{
+    const std::map<int, std::string> products =
+    {
+        std::pair<int, std::string>(10, "Cachorro Quente"),
+        std::pair<int, std::string>(11, "Bauru Simples"),
+        std::pair<int, std::string>(12, "Bauru com Ovo"),
+        std::pair<int, std::string>(13, "Hambúrguer"),
+        std::pair<int, std::string>(14, "Cheeseburguer"),
+        std::pair<int, std::string>(15, "Refrigerante")
+    };
 
-		if opcao == 0:
-			break
-		elif opcao > 3 or opcao < 0:
-			print("Opção inválida.")
-		else:
-			resultado = opcoes[opcao]()
-			print(f"O resultado é: {resultado:.2f}")
+    int code { 0 };
 
-def exercicio010():
-	dividendo = int(input("Número: "))
-	isPrime   = True
+	while ( true )
+    {
+        cout << "Código do produto ou <0> para sair: ";
+		cin >> code;
 
-	if dividendo > 1:
-		for divisor in range(2, dividendo):
-			if dividendo % divisor == 0:
-				isPrime = False
-				break
-	else:
-		isPrime = False
+		if ( code == 0 )
+        {
+			break;
+        }
+		else if ( code < 10 or code > 15 )
+        {
+			clog << "Código inválido.\n";
+        }
+		else
+        {
+            int quantidade { 0 };
 
-	print("É primo." if isPrime else "Não é primo.")
+            cout << "Quantidade: ";
+			cin >> quantidade;
 
+			int preco = calcularPreco(code, quantidade);
 
-exercicio03()
+			cout
+				<< "\nCódigo do Pedido....: " << code
+				<< "\nEspecificação.......: " << products.at(code)
+				<< "\nQuantidade do item..: " << quantidade
+				<< "\nPreço total.........: R$ " << std::setprecision(4) << preco
+                << '\n'
+			;
+        }
+    }
+}
+
+void exercicio06()
+{
+	float encomenda { 0.0f }, distance { 0.0f }, frete { 0.0f };
+
+    cout << "Valor da encomenda: ";
+	cin >> encomenda;
+
+	cout << "Informe a distância percorrida: ";
+	cin >> distance;
+
+	if ( distance > 0 and distance <= 100 )
+    {
+		frete = encomenda * 0.2;
+    }
+	else if ( distance >= 101 and distance <= 300 )
+    {
+		frete = encomenda * 0.17;
+    }
+	else if ( distance >= 301 and distance <= 500 )
+    {
+		frete = encomenda * 0.15;
+    }
+	else if ( distance >= 501 and distance <= 1000 )
+    {
+		frete = encomenda * 0.13;
+    }
+	else if ( distance > 1000 )
+    {
+		frete = encomenda * 0.1;
+    }
+
+	cout << "O valor do frete é: R$ " << std::setprecision(4) << frete << '\n';
+}
+
+void exercicio07()
+{
+    int value { 0 }, diferenca { 0 };
+
+    cout << "Valor em R$: ";
+	cin >> value;
+
+	int notas100 = value / 100;
+	diferenca = value - (notas100 * 100);
+
+	cout << notas100 << "nota(s) de 100 reais.\n";
+
+	int notas50 = diferenca / 50;
+	diferenca -= (notas50 * 50);
+
+	cout << notas50 << " nota(s) de 50 reais.\n";
+
+	int notas10 = diferenca / 10;
+	diferenca -= (notas10 * 10);
+
+	cout << notas10 << " nota(s) de 10 reais.\n";
+
+	int notas5 = diferenca / 5;
+	diferenca -= (notas5 * 5);
+
+	cout << notas5 << " nota(s) de 5 reais.\n";
+
+	int notas1 = diferenca / 1;
+	cout << notas1 << " nota(s) de 1 real.\n";
+}
+
+void exercicio08()
+{
+    const std::map<int, std::function<float ()>> options =
+    {
+        std::pair<int, std::function<float ()>>(1, []()
+        {
+            float base { 0.0f }, altura { 0.0f };
+
+            cout << "Base: ";
+            cin >> base;
+
+            cout << "Altura: ";
+            cin >> altura;
+
+            return base * altura;
+        }),
+        std::pair<int, std::function<float ()>>(2, []()
+        {
+            float base { 0.0f }, altura { 0.0f };
+
+            cout << "Base: ";
+            cin >> base;
+
+            cout << "Altura: ";
+            cin >> altura;
+
+		    return base * altura / 2;
+        }),
+        std::pair<int, std::function<float ()>>(3, []()
+        {
+		    const float PI = 3.14f;
+
+            float raio { 0.0f };
+
+            cout << "Raio: ";
+            cin >> raio;
+
+	    	return PI * raio * raio;
+        })
+    };
+
+    int option { 0 };
+
+    while ( true )
+    {
+        cout <<
+            "\nCalcular a área do:"
+            "\n1. Retângulo | 2. Triângulo | 3. Círculo | 0. Sair"
+            "\nOpção\? "
+        ;
+		cin >> option;
+
+		if ( option == 0 )
+        {
+			break;
+        }
+
+        if ( option < 0 or option > 3 )
+        {
+            clog << "Opção inválida.\n";
+        }
+        else
+        {
+            cout << "O resultado é: " << std::setprecision(4) << options.at(option)() << '\n';
+        }
+    }
+}
+
+void exercicio010()
+{
+	int dividendo { 0 };
+	bool isPrime { true };
+
+    cout << "Número: ";
+    cin >> dividendo;
+
+	if ( dividendo > 1 )
+    {
+		// for ( divisor in range(2, dividendo) )
+        // {
+		// 	if ( dividendo % divisor == 0 )
+        //     {
+		// 		isPrime = false;
+
+        //         break;
+        //     }
+        // }
+    }
+	else
+    {
+		isPrime = false;
+    }
+
+	cout << ( isPrime ) ? "É primo." : "Não é primo.";
+}
