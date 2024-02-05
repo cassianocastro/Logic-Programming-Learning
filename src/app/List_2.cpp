@@ -393,10 +393,3 @@ void exercicio010(void)
 			cout << ( day < 21 ) ? "Primavera" : "Verão";
     }
 }
-
-int main(void)
-{
-    exercicio07();
-
-    return 0;
-}
