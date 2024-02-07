@@ -1,157 +1,300 @@
-import random
+#include <array>
+#include <iostream>
+#include <iomanip>
+#include <vector>
 
-# NOTE: Faça um algoritmo que leia um número, e seguida,
-# NOTE: informe se o número digitado é divisível por
-# NOTE: 3 e por 5.
-def exercicio01():
-    numero = int(input("Número: "))
-    if numero % 3 == 0 and numero % 5 == 0:
-        print("É divisível por 3 e 5.")
-    else:
-        print("Não é divisível por 3 e 5.")
+using std::cin, std::cout;
 
-# NOTE: Faça um algoritmo que solicite um numero, em seguida,
-# NOTE: mostre quantos e quais são seus
-# NOTE: divisores.
-def exercicio02():
-    contador_divisores, lista_divisores = 0, []
+/**
+ * Faça um algoritmo que leia um número, e seguida,
+ * informe se o número digitado é divisível por
+ * 3 e por 5.
+ */
+void exercicio01()
+{
+    int number { 0 };
 
-    numero = int(input("Número: "))
+    cout << "Número: ";
+    cin >> number;
 
-    for divisor in range(1, numero + 1):
-        if numero % divisor == 0:
-            contador_divisores += 1
-            lista_divisores.append(divisor)
+    if ( number % 3 == 0 and number % 5 == 0 )
+        cout << "É divisível por 3 e 5.\n";
+    else
+        cout << "Não é divisível por 3 e 5.\n";
+}
 
-    for divisor in lista_divisores:
-        print(f"{divisor} é divisor de {numero}.")
-    print("Total de divisores encontrados:", contador_divisores)
+/**
+ * Faça um algoritmo que solicite um numero, em seguida,
+ * mostre quantos e quais são seus
+ * divisores.
+ */
+void exercicio02()
+{
+    std::vector<int> dividers {};
 
-# NOTE: Faça um algoritmo que leia um vetor de 10 posições com
-# NOTE: números inteiros, em seguida, escreva
-# NOTE: os números na ordem inversa que foram digitados.
-def exercicio03():
-    lista = [None] * 10
-    for i in range(0, len(lista)):
-        lista[i] = random.randint(1, 51)
-        print(lista[i])
+    int number { 0 }, count { 0 };
 
-    print("Ordem Inversa:")
-    for aleatorio in lista[::-1]:
-        print(aleatorio)
+    cout << "Número: ";
+    cin >> number;
 
-    #for aleatorio in reversed(lista):
-    #    print(aleatorio)
+    for ( int i { 1 }, size { number + 1 }; i < size; ++i )
+    {
+        if ( number % i == 0 )
+        {
+            ++count;
 
-# NOTE: Faça um algoritmo que leia um vetor de 10 posições com
-# NOTE: números inteiros, em seguida, mostre a
-# NOTE: soma e a média dos números digitados.
-def exercicio04():
-    lista, soma = [None] * 10, 0
+            dividers.push_back(i);
+        }
+    }
 
-    for i in range(0, len(lista)):
-        lista[i] = random.randint(1, 51)
-        soma += lista[i]
+    for ( auto& divisor : dividers )
+    {
+        cout << divisor << " é divisor de " << number << '\n';
+    }
 
-    media = soma / len(lista)
-    print(
-        f"Soma dos valores na lista: {soma}\n"
-        f"Média dos valores: {media:.2f}"
-    )
+    cout << "Total de divisores encontrados: " << count << '\n';
+}
 
-# NOTE: Faça um algoritmo que leia um vetor de 10 números. Em seguida,
-# NOTE: escreva na tela o resultado de
-# NOTE: cada posição do vetor multiplicado por 2.
-def exercicio05():
-    lista = [None] * 10
+/**
+ * Faça um algoritmo que leia um vetor de 10 posições com
+ * números inteiros, em seguida, escreva
+ * os números na ordem inversa que foram digitados.
+ */
+void exercicio03()
+{
+    std::array<int, 10> list = {};
 
-    for i in range(0, len(lista)):
-        lista[i] = random.randint(1, 51)
-        print( lista[i] )
+    std::srand(time(nullptr));
 
-    for numero_aleatorio in lista:
-        print(numero_aleatorio, f"multiplicado por 2: {numero_aleatorio * 2}")
+    for ( std::size_t i { 0 }, size { list.size() }; i < size; ++i )
+    {
+        list[i] = rand() % 51;
 
-# NOTE: Faça um algoritmo que leia um vetor de 10 posições.
-# NOTE: Em seguida, informe quais números do
-# NOTE: vetor digitado são divisíveis por 3 e 5.
+        cout << list[i] << ' ';
+    }
 
-def exercicio06():
-    lista = [None] * 10
+    cout << "\nOrdem Inversa:\n";
 
-    for i in range(0, len(lista)):
-        lista[i] = random.randint(1, 51)
-        print( lista[i] )
+    for ( auto i { list.crbegin() }, size { list.crend() }; i < size; ++i )
+    {
+        cout << *i << ' ';
+    }
 
-    for numero_aleatorio in lista:
-        if  numero_aleatorio % 3 == 0 and numero_aleatorio % 5 == 0:
-            print(numero_aleatorio,"é divisível.")
+    cout << '\n';
+}
 
-# NOTE: Faça um algoritmo que leia um vetor de 10 posições.
-# NOTE: Em seguida, informe quais números do
-# NOTE: vetor digitado são pares, quais são impares e quais são primo
+/**
+ * Faça um algoritmo que leia um vetor de 10 posições com números inteiros,
+ * em seguida, mostre a soma e a média dos números digitados.
+ */
+void exercicio04()
+{
+    int soma { 0 };
 
-def exercicio07():
-    def isPar(numero):
-        return numero % 2 == 0
+    std::array<int, 10> list {};
 
-    def isPrime(dividendo):
-        if dividendo > 1:
-            for divisor in range(2, dividendo):
-                if dividendo % divisor == 0:
-                    return False
-        else:
-            return False
-        return True
+    std::srand(time(nullptr));
 
-    lista = [None] * 10
+    for ( std::size_t i { 0 }, size { list.size() }; i < size; ++i )
+    {
+        list[i] = rand() % 51;
 
-    for i in range(0, len(lista)):
-        lista[i] = random.randint(1, 51)
-        print( lista[i], end = " " )
-    print("\n")
-    for numero_aleatorio in lista:
-        if isPar(numero_aleatorio):
-            #print(f"{numero_aleatorio:3} é par e", end = " ")
-            print("%3.2d é par e" % numero_aleatorio, end = " ")
-        else:
-            #print(f"{numero_aleatorio:3} é ímpar e", end = " ")
-            print("%3.2d é ímpar e" % numero_aleatorio, end = " ")
+        cout << list[i] << ' ';
 
-        print("é primo." if isPrime(numero_aleatorio) else "não é primo.")
+        soma += list[i];
+    }
 
-def exercicio08():
-    vector = []
+    float media = (float) soma / list.size();
 
-    for index in range( 10 ):
-        vector.append(random.randint(1, 51))
+    cout
+        << "\nSoma dos valores: " << soma
+        << "\nMédia dos valores: " << std::showpoint << std::setprecision(4) << media
+        << '\n'
+    ;
+}
 
-    reversedVector = vector.copy()
-    reversedVector.reverse()
+/**
+ * Faça um algoritmo que leia um vetor de 10 números. Em seguida,
+ * escreva na tela o resultado de cada posição do vetor multiplicado por 2.
+ */
+void exercicio05()
+{
+    std::array<int, 10> list {};
 
-    print(vector,"\n",reversedVector)
+    std::srand(time(nullptr));
 
-def exercicio09():
-    vector1, vector2, vector3 = [], [], []
+    for ( std::size_t i { 0 }, size { list.size() }; i < size; ++i )
+    {
+        list[i] = rand() % 51;
 
-    for index in range( 5 ):
-        vector1.append(random.randint(1, 51))
-        vector2.append(random.randint(1, 51))
+        cout << list[i] << ' ';
+    }
 
-        vector3.append(vector1[index] + vector2[index])
+    cout << "\n\n";
 
-    print("{}\n{}\n{}".format(vector1, vector2, vector3))
+    for ( auto& number : list )
+    {
+        cout << std::setfill('0') << std::setw(2) << number << " * 2 = " << number * 2 << '\n';
+    }
+}
 
-def exercicio010():
-    vector, maior = [], 0
+/**
+ * Faça um algoritmo que leia um vetor de 10 posições.
+ * Em seguida, informe quais números do vetor digitado são divisíveis por 3 e 5.
+ */
+void exercicio06()
+{
+    std::array<int, 10> list {};
 
-    for i in range( 10 ):
-        vector.append(random.randint(1, 51))
-        if vector[i] > maior:
-            maior = vector[i]
-    print(
-        "{}".format(vector),
-        "\nMaior número encontrado: %.2d" % maior
-    )
+    std::srand(time(nullptr));
 
-exercicio010()
+    for ( std::size_t i { 0 }, size { list.size() }; i < size; ++i )
+    {
+        list[i] = rand() % 51;
+
+        cout << list[i] << ' ';
+    }
+
+    cout << "\n\n";
+
+    for ( auto& number : list )
+    {
+        if ( number % 3 == 0 and number % 5 == 0 )
+        {
+            cout << std::setfill('0') << std::setw(2) << number << " é divisível.\n";
+        }
+    }
+}
+
+
+bool isPar(int number)
+{
+    return number % 2 == 0;
+}
+
+bool isPrime(int dividend)
+{
+    if ( dividend < 1 )
+    {
+        return false;
+    }
+
+    for ( int divisor = 2; divisor < dividend; ++divisor )
+    {
+        if ( dividend % divisor == 0 )
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+/**
+ * Faça um algoritmo que leia um vetor de 10 posições.
+ * Em seguida, informe quais números do
+ * vetor digitado são pares, quais são impares e quais são primo
+ */
+void exercicio07()
+{
+    std::array<int, 10> lista {};
+
+    std::srand(time(nullptr));
+
+    for ( std::size_t i { 0 }, size { lista.size() }; i < size; ++i )
+    {
+        lista[i] = rand() % 51;
+
+        cout << lista[i] << ' ';
+    }
+
+    cout << "\n\n";
+
+    for ( auto& number : lista )
+    {
+        if ( isPar(number) )
+        {
+            cout << std::setfill('0') << std::setw(2) << number << " é par e ";
+        }
+        else
+        {
+            cout << std::setfill('0') << std::setw(2) << number << " é ímpar e ";
+        }
+
+        cout << (( isPrime(number) ) ? "é primo." : "não é primo.") << '\n';
+    }
+}
+
+void exercicio08()
+{
+    std::vector<int> vector {}, reversed {};
+
+    std::srand(time(nullptr));
+
+    for ( int i { 0 }; i < 10; ++i )
+    {
+        vector.push_back(rand() % 51);
+
+        cout << vector.back() << ' ';
+    }
+
+    cout << "\n\n";
+
+    for ( auto i { vector.crbegin() }, size { vector.crend() }; i != size; ++i )
+    {
+        reversed.push_back(*i);
+
+        cout << reversed.back() << ' ';
+    }
+
+    cout << '\n';
+}
+
+void exercicio09()
+{
+    std::array<int, 5> array1 {}, array2 {}, array3 {};
+
+    std::srand(time(nullptr));
+
+    for ( int i { 0 }; i < 5; ++i )
+    {
+        array1.at(i) = rand() % 51;
+        array2.at(i) = rand() % 51;
+        array3.at(i) = array1.at(i) + array2.at(i);
+    }
+
+    cout << "Array 1\tArray 2\tArray 3\n\n";
+
+    for ( std::size_t i { 0 }, size { array1.size() }; i != size; ++i )
+    {
+        cout << array1.at(i) << '\t' << array2.at(i) << '\t' << array3.at(i) << '\n';
+    }
+
+    cout << std::endl;
+}
+
+void exercicio10()
+{
+    int biggest { 0 };
+
+    std::vector<int> vector {};
+
+    std::srand(time(nullptr));
+
+    for ( int i { 0 }; i < 10; ++i )
+    {
+        vector.push_back(rand() % 51);
+
+        if ( vector.at(i) > biggest )
+        {
+            biggest = vector.at(i);
+        }
+    }
+
+    for ( const auto& number : vector )
+    {
+        cout << number << ' ';
+    }
+
+    cout << "\nMaior número encontrado: " << biggest << '\n';
+}
