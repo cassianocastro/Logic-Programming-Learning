@@ -133,36 +133,32 @@ void exercicio4(void)
 {
     float valor = 0.0f, valor_liquido = 0.0f;
 
-    printf("Valor: ");
-    scanf("%f", &valor);
+    cout << "Valor: ";
+    cin >> valor;
 
     if ( valor < 100.0f )
     {
         float desconto = valor * 0.05f;
         valor_liquido  = valor - desconto;
 
-        printf(
-			"\nValor Bruto......: R$ %.2f"
-            "\nValor Líquido....: R$ %.2f"
-            "\nDesconto.........: R$ %.2f",
-            valor,
-            valor_liquido,
-            desconto
-		);
+        cout
+			<< "\nValor Bruto......: R$ " << std::setprecision(4) << valor,
+            << "\nValor Líquido....: R$ " << std::setprecision(4) << valor_liquido,
+            << "\nDesconto.........: R$ " << std::setprecision(4) << desconto
+            << '\n'
+		;
     }
     else
     {
         float acrescimo = valor * 0.07f;
         valor_liquido   = valor + acrescimo;
 
-        printf(
-			"\nValor Bruto......: R$ %.2f"
-            "\nValor Líquido....: R$ %.2f"
-            "\nAcréscimo........: R$ %.2f",
-            valor,
-            valor_liquido,
-            acrescimo
-		);
+        cout
+			<< "\nValor Bruto......: R$ " << std::setprecision(4) << valor
+            << "\nValor Líquido....: R$ " << std::setprecision(4) << valor_liquido
+            << "\nAcréscimo........: R$ " << std::setprecision(4) << acrescimo
+            << '\n'
+		;
     }
 }
 
