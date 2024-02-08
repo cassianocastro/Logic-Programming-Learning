@@ -51,17 +51,33 @@ void exercicio06(void);
 void exercicio07(void);
 
 /**
+ * Faça um algoritmo que leia um vetor de 10 posições.
+ * Em seguida, um segundo vetor recebe os números do primeiro vetor na ordem inversa.
  *
+ * Escrever o vetor inicial e o vetor resultante:
+ *
+ * Exemplo:
+ * Vetor inicial:    7 5 3 1 8 6 4 2 9 0
+ * Vetor resultante: 0 9 2 4 6 8 1 3 5 7
  */
 void exercicio08(void);
 
 /**
+ * Faça um algoritmo que leia 2 vetores de 5 posições com números inteiros,
+ * em seguida, armazene em um terceiro vetor a soma do primeiro e do segundo
+ * vetor em suas respectivas posições.
  *
+ * Exemplo:
+ * Vetor 1: 3 4 5 1 7
+ * Vetor 2: 1 2 3 8 0
+ * Vetor 3: 4 6 8 9 7 <---- Soma
  */
 void exercicio09(void);
 
 /**
+ * Faça um algoritmo que leia um vetor de 10 posições.
  *
+ * Em seguida, informe qual o maior número existente no vetor.
  */
 void exercicio10(void);
 
