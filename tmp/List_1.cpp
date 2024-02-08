@@ -162,16 +162,16 @@ void exercicio4(void)
 
 void exercicio5(void)
 {
-    Byte serie_informada = 0;
+    Byte serie { 0 };
 
     cout << "Informe a série: ";
-    cin >> serie_informada;
+    cin >> serie;
 
-    if ( serie_informada >= 1 and serie_informada <= 4 )
+    if ( serie >= 1 and serie <= 4 )
     {
         cout << "Turno da Manhã.\n";
     }
-    else if ( serie_informada >= 5 and serie_informada <= 8 )
+    else if ( serie >= 5 and serie <= 8 )
     {
         cout << "Turno da Tarde.\n";
     }
