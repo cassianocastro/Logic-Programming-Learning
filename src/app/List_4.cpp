@@ -1,7 +1,4 @@
-#include <array>
-#include <iostream>
-#include <iomanip>
-#include <vector>
+#include "../includes/List_4.hpp"
 
 using std::cin, std::cout;
 
