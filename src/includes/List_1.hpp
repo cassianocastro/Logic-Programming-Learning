@@ -2,6 +2,7 @@
 
 #define LIST_1_HPP
 
+#include <array>
 #include <cctype>
 #include <clocale>
 #include <cstdio>
