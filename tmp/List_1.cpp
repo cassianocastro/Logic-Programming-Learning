@@ -107,17 +107,17 @@ void exercicio3(void)
 {
     float buyValue { 0.0f }, discount { 0.0f };
 
-    char sex { '\0' };
-
     cout << "Valor da Compra: ";
     cin >> buyValue;
+
+    char sex { '\0' };
 
     do {
         cout << "Sexo: ";
         cin >> sex;
 
-        sex = tolower(sex);
-    } while ( sex != 'm' and sex != 'f' );
+        sex = std::tolower(sex);
+    } while ( sex not_eq 'm' and sex not_eq 'f' );
 
     discount = ( sex == 'm' ) ? buyValue * 0.1 : buyValue * 0.15;
 
