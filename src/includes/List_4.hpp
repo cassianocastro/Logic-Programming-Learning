@@ -2,6 +2,11 @@
 
 #define LIST_4_HPP
 
+#include <array>
+#include <iostream>
+#include <iomanip>
+#include <vector>
+
 /**
  * Faça um algoritmo que leia um número, e seguida,
  * informe se o número digitado é divisível por 3 e por 5.
