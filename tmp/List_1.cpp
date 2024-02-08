@@ -142,14 +142,14 @@ void exercicio4(void)
 
         cout
 			<< "\nValor Bruto......: R$ " << std::setprecision(4) << value
-            << "\nDesconto.........: R$ " << std::setprecision(4) << desconto
-            << "\nValor Líquido....: R$ " << std::setprecision(4) << value - desconto
+            << "\nDesconto.........: R$ " << std::setprecision(4) << discount
+            << "\nValor Líquido....: R$ " << std::setprecision(4) << value - discount
             << '\n'
 		;
     }
     else
     {
-        float addition = valor * 0.07f;
+        float addition = value * 0.07f;
 
         cout
 			<< "\nValor Bruto......: R$ " << std::setprecision(4) << value
