@@ -279,31 +279,38 @@ void exercicio8(void)
 
 void exercicio9(void)
 {
-    Byte vetor[5] = { 0, 0, 0, 0, 0 };
-    Byte maior_numero = 0, menor_numero = 0;
+    std::array<int, 5> array {};
 
-    for ( Byte indice = 0; indice < 5; indice++ )
+    int biggest { 0 }, smallest { 0 };
+
+    for ( int i { 0 }, size { array.size() }; i < size; ++i )
 	{
-        printf("Valor número %hhu: ", ( indice + 1 ));
-        scanf("%hhu", &vetor[indice]);
+        cout << "Valor número " << i + 1 << ": ";
+        cin >> array[i];
 
-        if ( vetor[indice] > maior_numero )
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        if ( i == 0 )
         {
-            maior_numero = vetor[indice];
+            smallest = array[i];
         }
 
-        if ( vetor[indice] < menor_numero )
+        if ( array[i] > biggest )
         {
-            menor_numero = vetor[indice];
+            biggest = array[i];
+        }
+
+        if ( array[i] < smallest )
+        {
+            smallest = array[i];
         }
     }
 
-    printf(
-		"O maior número informado foi: %hhu\n"
-        "O menor número foi: %hhu",
-        maior_numero,
-        menor_numero
-	);
+    cout
+		<< "\nMaior número: " << biggest
+        << "\nMenor número: " << smallest
+        << '\n'
+	;
 }
 
 void exercicio10(void)
