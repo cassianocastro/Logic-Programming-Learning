@@ -210,17 +210,17 @@ void exercicio7(void)
 {
     float x = 0.0f, y = 0.0f, a = 0.0f, b = 0.0f, valor_liquido = 0.0f;
 
-    printf("Primeiro valor: ");
-    scanf("%f", &x);
+    cout << "Primeiro valor: ";
+    cin >> x;
 
-    printf("Segundo valor: ");
-    scanf("%f", &y);
+    cout << "Segundo valor: ";
+    cin >> y;
 
-    printf("Terceiro valor: ");
-    scanf("%f", &a);
+    cout << "Terceiro valor: ";
+    cin >> a;
 
-    printf("Quarto valor: ");
-    scanf("%f", &b);
+    cout << "Quarto valor: ";
+    cin >> b;
 
     float sum1 = x + y;
     float sum2 = a + b;
@@ -230,30 +230,28 @@ void exercicio7(void)
     if ( sum1 > sum2 )
     {
         float discount = total * 0.2;
-        valor_liquido  = total - discount;
 
-        printf(
-			"\nSoma dos 2 primeiros valores..: R$ %.2f"
-            "\nSoma dos 2 últimos valores....: R$ %.2f"
-            "\nValor Bruto...................: R$ %.2f"
-            "\nValor Líquido.................: R$ %.2f"
-            "\nDesconto......................: R$ %.2f",
-            sum1, sum2, total, valor_liquido, discount
-		);
+        cout
+			<< "\nSoma dos 2 primeiros valores..: R$ " << sum1
+            << "\nSoma dos 2 últimos valores....: R$ " << sum2
+            << "\nValor Bruto...................: R$ " << total
+            << "\nDesconto......................: R$ " << discount
+            << "\nValor Líquido.................: R$ " << total - discount
+            << '\n'
+		;
     }
     else
     {
         float addition = total * 0.2;
-        valor_liquido  = total + addition;
 
-        printf(
-			"\nSoma dos 2 primeiros valores..: R$ %.2f"
-            "\nSoma dos 2 últimos valores....: R$ %.2f"
-            "\nValor Bruto...................: R$ %.2f"
-            "\nValor Líquido.................: R$ %.2f"
-            "\nAcréscimo.....................: R$ %.2f",
-            sum1, sum2, total, valor_liquido, addition
-		);
+        cout
+			<< "\nSoma dos 2 primeiros valores..: R$ " << sum1
+            << "\nSoma dos 2 últimos valores....: R$ " << sum2
+            << "\nValor Bruto...................: R$ " << total
+            << "\nAcréscimo.....................: R$ " << addition
+            << "\nValor Líquido.................: R$ " << total + addition
+            << '\n'
+		;
     }
 }
 
