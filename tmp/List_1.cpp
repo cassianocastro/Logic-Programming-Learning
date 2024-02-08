@@ -90,18 +90,17 @@ void exercicio1(void)
 
 void exercicio2(void)
 {
-    float celsius = 0.0f;
+    float celsius { 0.0f };
 
-    printf("Temperatura em Graus Celsius: ");
-    scanf("%f", &celsius);
+    cout << "Temperatura em Graus Celsius: ";
+    cin >> celsius;
 
-    printf(
-		"A temperatura em..."
-        "\nGraus Farenheit..: %.2f"
-        "\nGraus Kelvin.....: %.2f",
-        (celsius * 1.8 + 32),
-        (celsius + 273.15)
-	);
+    cout
+		<< "A temperatura em..."
+        << "\nGraus Farenheit..: " << std::setprecision(4) << celsius * 1.8 + 32
+        << "\nGraus Kelvin.....: " << std::setprecision(4) << celsius + 273.15
+        << '\n'
+	;
 }
 
 void exercicio3(void)
