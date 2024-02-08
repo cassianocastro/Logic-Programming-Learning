@@ -105,8 +105,9 @@ void exercicio2(void)
 
 void exercicio3(void)
 {
-    float buyValue = 0.0f, discount = 0.0f, liquidValue = 0.0f;
-    char sex = '\0';
+    float buyValue { 0.0f }, discount { 0.0f }, liquidValue { 0.0f };
+
+    char sex { '\0' };
 
     printf("Valor da Compra: ");
     scanf("%f", &buyValue);
