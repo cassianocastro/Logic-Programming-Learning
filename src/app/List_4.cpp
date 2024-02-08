@@ -5,11 +5,6 @@
 
 using std::cin, std::cout;
 
-/**
- * Faça um algoritmo que leia um número, e seguida,
- * informe se o número digitado é divisível por
- * 3 e por 5.
- */
 void exercicio01()
 {
     int number { 0 };
@@ -23,11 +18,6 @@ void exercicio01()
         cout << "Não é divisível por 3 e 5.\n";
 }
 
-/**
- * Faça um algoritmo que solicite um numero, em seguida,
- * mostre quantos e quais são seus
- * divisores.
- */
 void exercicio02()
 {
     std::vector<int> dividers {};
@@ -55,11 +45,6 @@ void exercicio02()
     cout << "Total de divisores encontrados: " << count << '\n';
 }
 
-/**
- * Faça um algoritmo que leia um vetor de 10 posições com
- * números inteiros, em seguida, escreva
- * os números na ordem inversa que foram digitados.
- */
 void exercicio03()
 {
     std::array<int, 10> list = {};
@@ -83,10 +68,6 @@ void exercicio03()
     cout << '\n';
 }
 
-/**
- * Faça um algoritmo que leia um vetor de 10 posições com números inteiros,
- * em seguida, mostre a soma e a média dos números digitados.
- */
 void exercicio04()
 {
     int soma { 0 };
@@ -113,10 +94,6 @@ void exercicio04()
     ;
 }
 
-/**
- * Faça um algoritmo que leia um vetor de 10 números. Em seguida,
- * escreva na tela o resultado de cada posição do vetor multiplicado por 2.
- */
 void exercicio05()
 {
     std::array<int, 10> list {};
@@ -138,10 +115,6 @@ void exercicio05()
     }
 }
 
-/**
- * Faça um algoritmo que leia um vetor de 10 posições.
- * Em seguida, informe quais números do vetor digitado são divisíveis por 3 e 5.
- */
 void exercicio06()
 {
     std::array<int, 10> list {};
@@ -166,7 +139,6 @@ void exercicio06()
     }
 }
 
-
 bool isPar(int number)
 {
     return number % 2 == 0;
@@ -190,11 +162,6 @@ bool isPrime(int dividend)
     return true;
 }
 
-/**
- * Faça um algoritmo que leia um vetor de 10 posições.
- * Em seguida, informe quais números do
- * vetor digitado são pares, quais são impares e quais são primo
- */
 void exercicio07()
 {
     std::array<int, 10> lista {};
