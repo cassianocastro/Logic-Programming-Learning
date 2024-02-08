@@ -183,9 +183,7 @@ void exercicio5(void)
 
 void exercicio6(void)
 {
-    float x = 0.0f, y = 0.0f, z = 0.0f;
-
-    float valor_liquido = 0.0f;
+    float x { 0.0f }, y { 0.0f }, z { 0.0f };
 
     cout << "Primeiro Valor: ";
     cin >> x;
@@ -198,14 +196,12 @@ void exercicio6(void)
 
     float sum = x + y + z;
 
-    float discount = ( sum > 1000 ) ? sum * 0.1 : sum * 0.08;
-
-    valor_liquido = sum - discount;
+    float discount = ( sum > 1000 ) ? sum * 0.1f : sum * 0.08f;
 
     cout
-		<< "\nValor Bruto......: R$ " << std::setprecision(4) << soma
-        << "\nValor Líquido....: R$ " << std::setprecision(4) << valor_liquido
-        << "\nDesconto.........: R$ " << std::setprecision(4) << desconto
+		<< "\nValor Bruto......: R$ " << std::setprecision(4) << sum
+        << "\nDesconto.........: R$ " << std::setprecision(4) << discount
+        << "\nValor Líquido....: R$ " << std::setprecision(4) << sum - discount
         << '\n'
 	;
 }
