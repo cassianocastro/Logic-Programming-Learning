@@ -105,37 +105,37 @@ void exercicio2(void)
 
 void exercicio3(void)
 {
-    float valor_compra = 0.0f, desconto = 0.0f, valor_liquido = 0.0f;
-    char sexo = '\0';
+    float buyValue = 0.0f, discount = 0.0f, liquidValue = 0.0f;
+    char sex = '\0';
 
     printf("Valor da Compra: ");
-    scanf("%f", &valor_compra);
+    scanf("%f", &buyValue);
 
     do {
         printf("Sexo: ");
-        scanf(" %c", &sexo);
+        scanf(" %c", &sex);
 
-        sexo = tolower(sexo);
-    } while ( sexo != 'm' and sexo != 'f' );
+        sex = tolower(sex);
+    } while ( sex != 'm' and sex != 'f' );
 
-    if ( sexo == 'm' )
+    if ( sex == 'm' )
     {
-        desconto      = valor_compra * 0.1;
-        valor_liquido = valor_compra - desconto;
+        discount    = buyValue * 0.1;
+        liquidValue = buyValue - discount;
     }
     else
     {
-        desconto      = valor_compra * 0.15;
-        valor_liquido = valor_compra - desconto;
+        discount    = buyValue * 0.15;
+        liquidValue = buyValue - discount;
     }
 
     printf(
 		"\nValor Bruto......: R$ %.2f"
         "\nValor Líquido....: R$ %.2f"
         "\nDesconto.........: R$ %.2f",
-        valor_compra,
-        valor_liquido,
-        desconto
+        buyValue,
+        liquidValue,
+        discount
 	);
 }
 
