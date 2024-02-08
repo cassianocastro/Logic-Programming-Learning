@@ -5,8 +5,6 @@
 #include <array>
 #include <iostream>
 #include <iomanip>
-#include <clocale>
-#include <cstdlib>
 
 typedef unsigned char Byte;
 
