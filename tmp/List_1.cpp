@@ -79,13 +79,13 @@ void exercicio1(void)
 {
     float cotacao_dolar = 0.0f, valor_reais = 0.0f;
 
-    printf("Cotação em Dólar: ");
-    scanf("%f", &cotacao_dolar);
+    cout << "Cotação em Dólar: ";
+    cin >> cotacao_dolar;
 
-    printf("Valor em Reais: ");
-    scanf("%f", &valor_reais);
+    cout << "Valor em Reais: ";
+    cin >> valor_reais;
 
-    printf("O valor em dólares é: U$ %.2f", ( valor_reais / cotacao_dolar ));
+    cout << "O valor em dólares é: U$ " << std::setprecision(4) << valor_reais / cotacao_dolar;
 }
 
 void exercicio2(void)
