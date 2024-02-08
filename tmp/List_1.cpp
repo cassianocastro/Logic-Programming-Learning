@@ -183,23 +183,24 @@ void exercicio5(void)
 
 void exercicio6(void)
 {
-    float primeiro_valor = 0.0f, segundo_valor  = 0.0f, terceiro_valor = 0.0f;
-    float soma = 0.0f, desconto = 0.0f, valor_liquido = 0.0f;
+    float x = 0.0f, y = 0.0f, z = 0.0f;
+
+    float valor_liquido = 0.0f;
 
     printf("Primeiro Valor: ");
-    scanf("%f", &primeiro_valor);
+    scanf("%f", &x);
 
     printf("Segundo Valor: ");
-    scanf("%f", &segundo_valor);
+    scanf("%f", &y);
 
     printf("Terceiro Valor: ");
-    scanf("%f", &terceiro_valor);
+    scanf("%f", &z);
 
-    soma = primeiro_valor + segundo_valor + terceiro_valor;
+    float sum = x + y + z;
 
-    desconto = ( soma > 1000 ) ? soma * 0.1 : soma * 0.08;
+    float discount = ( sum > 1000 ) ? sum * 0.1 : sum * 0.08;
 
-    valor_liquido = soma - desconto;
+    valor_liquido = sum - discount;
 
     printf(
 		"\nValor Bruto......: R$ %.2f"
