@@ -1,12 +1,13 @@
-#ifndef EXERCICIOS_LISTA_1_H
+#ifndef LIST_1_HPP
 
-#define EXERCICIOS_LISTA_1_H
+#define LIST_1_HPP
 
 #include <cctype>
 #include <clocale>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <iostream>
 
 typedef unsigned char Byte;
 
