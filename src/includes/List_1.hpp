@@ -2,13 +2,11 @@
 
 #define EXERCICIOS_LISTA_1_H
 
-#include <ctype.h>
-#include <iso646.h>
-#include <locale.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cctype>
+#include <clocale>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
 typedef unsigned char Byte;
 
