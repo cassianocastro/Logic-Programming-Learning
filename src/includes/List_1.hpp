@@ -3,14 +3,10 @@
 #define LIST_1_HPP
 
 #include <array>
-#include <cctype>
-#include <clocale>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
 #include <iostream>
 #include <iomanip>
-#include <limits>
+#include <clocale>
+#include <cstdlib>
 
 typedef unsigned char Byte;
 
