@@ -5,13 +5,13 @@
  */
 int main(void)
 {
-    setlocale(LC_ALL, "");
+    std::setlocale(LC_ALL, "");
 
-    Opcoes opcao;
+    int opcao { 0 };
 
     while ( true )
 	{
-        printf(
+        cout <<
             "\nEscolha a opção:"
             "\n0. Sair"
             "\n1. Exercício nº 01"
@@ -25,9 +25,8 @@ int main(void)
             "\n9. Exercício nº 09"
             "\n10.Exercício nº 10"
             "\nOpção? "
-        );
-        scanf("%d", &opcao);
-        getchar();
+        ;
+        cin >> opcao;
 
         system("clear");
 
