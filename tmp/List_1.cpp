@@ -315,22 +315,22 @@ void exercicio9(void)
 
 void exercicio10(void)
 {
-    Byte vetor[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    Byte contador_Pares = 0, contador_Impares = 0;
+    std::array<int, 10> array {};
 
-    for ( Byte indice = 0; indice < 10; indice++ )
+    int even { 0 }, odd { 0 };
+
+    for ( int i { 0 }, size { array.size() }; i < size; ++i )
 	{
-        printf("Valor número %hhu: ", ( indice + 1 ));
-        scanf("%hhu", &vetor[indice]);
+        cout << "Valor número " << i + 1 << ": ";
+        cin >> array[i];
 
-        ( vetor[indice] % 2 == 0 ) ? contador_Pares++ : contador_Impares++;
+        ( array[i] % 2 == 0 ) ? ++even : ++odd;
     }
 
-    printf(
-		"Quantidade de números..."
-        "\nPares......: %hhu"
-        "\nÍmpares....: %hhu",
-        contador_Pares,
-        contador_Impares
-	);
+    cout
+		<< "Quantidade de números..."
+        << "\nPares......: " << even
+        << "\nÍmpares....: " << odd
+        << '\n'
+	;
 }
