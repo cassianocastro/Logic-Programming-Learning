@@ -257,20 +257,24 @@ void exercicio7(void)
 
 void exercicio8(void)
 {
-    Byte vetor[5] = {0, 0, 0, 0, 0}, maior_numero = 0;
+    std::array<int, 5> array {};
 
-    for ( Byte indice = 0; indice < 5; indice++ )
+    int biggest { 0 };
+
+    for ( int i { 0 }, size { array.size() }; i < size; ++i )
 	{
-        printf("Valor: ");
-        scanf("%hhu", &vetor[indice]);
+        cout << "Valor: ";
+        cin >> array[i];
 
-        if ( vetor[indice] > maior_numero )
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        if ( array[i] > biggest )
         {
-            maior_numero = vetor[indice];
+            biggest = array[i];
         }
     }
 
-    printf("O maior número informado foi: %hhu", maior_numero);
+    cout << "O maior número informado foi: " << biggest << '\n';
 }
 
 void exercicio9(void)
