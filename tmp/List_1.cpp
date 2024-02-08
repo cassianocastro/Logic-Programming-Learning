@@ -208,28 +208,29 @@ void exercicio6(void)
 
 void exercicio7(void)
 {
-    float valor1 = 0.0f, valor2 = 0.0f, valor3 = 0.0f, valor4 = 0.0f, valor_liquido = 0.0f;
+    float x = 0.0f, y = 0.0f, a = 0.0f, b = 0.0f, valor_liquido = 0.0f;
 
     printf("Primeiro valor: ");
-    scanf("%f", &valor1);
+    scanf("%f", &x);
 
     printf("Segundo valor: ");
-    scanf("%f", &valor2);
+    scanf("%f", &y);
 
     printf("Terceiro valor: ");
-    scanf("%f", &valor3);
+    scanf("%f", &a);
 
     printf("Quarto valor: ");
-    scanf("%f", &valor4);
+    scanf("%f", &b);
 
-    float soma1 = valor1 + valor2;
-    float soma2 = valor3 + valor4;
-    float total = soma1  + soma2;
+    float sum1 = x + y;
+    float sum2 = a + b;
 
-    if ( soma1 > soma2 )
+    float total = sum1 + sum2;
+
+    if ( sum1 > sum2 )
     {
-        float desconto = total * 0.2;
-        valor_liquido  = total - desconto;
+        float discount = total * 0.2;
+        valor_liquido  = total - discount;
 
         printf(
 			"\nSoma dos 2 primeiros valores..: R$ %.2f"
@@ -237,13 +238,13 @@ void exercicio7(void)
             "\nValor Bruto...................: R$ %.2f"
             "\nValor Líquido.................: R$ %.2f"
             "\nDesconto......................: R$ %.2f",
-            soma1, soma2, total, valor_liquido, desconto
+            sum1, sum2, total, valor_liquido, discount
 		);
     }
     else
     {
-        float acrescimo = total * 0.2;
-        valor_liquido   = total + acrescimo;
+        float addition = total * 0.2;
+        valor_liquido  = total + addition;
 
         printf(
 			"\nSoma dos 2 primeiros valores..: R$ %.2f"
@@ -251,7 +252,7 @@ void exercicio7(void)
             "\nValor Bruto...................: R$ %.2f"
             "\nValor Líquido.................: R$ %.2f"
             "\nAcréscimo.....................: R$ %.2f",
-            soma1, soma2, total, valor_liquido, acrescimo
+            sum1, sum2, total, valor_liquido, addition
 		);
     }
 }
