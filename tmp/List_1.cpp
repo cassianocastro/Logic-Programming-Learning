@@ -187,14 +187,14 @@ void exercicio6(void)
 
     float valor_liquido = 0.0f;
 
-    printf("Primeiro Valor: ");
-    scanf("%f", &x);
+    cout << "Primeiro Valor: ";
+    cin >> x;
 
-    printf("Segundo Valor: ");
-    scanf("%f", &y);
+    cout << "Segundo Valor: ";
+    cin >> y;
 
-    printf("Terceiro Valor: ");
-    scanf("%f", &z);
+    cout << "Terceiro Valor: ";
+    cin >> z;
 
     float sum = x + y + z;
 
@@ -202,14 +202,12 @@ void exercicio6(void)
 
     valor_liquido = sum - discount;
 
-    printf(
-		"\nValor Bruto......: R$ %.2f"
-        "\nValor Líquido....: R$ %.2f"
-        "\nDesconto.........: R$ %.2f",
-        soma,
-        valor_liquido,
-        desconto
-	);
+    cout
+		<< "\nValor Bruto......: R$ " << std::setprecision(4) << soma
+        << "\nValor Líquido....: R$ " << std::setprecision(4) << valor_liquido
+        << "\nDesconto.........: R$ " << std::setprecision(4) << desconto
+        << '\n'
+	;
 }
 
 void exercicio7(void)
