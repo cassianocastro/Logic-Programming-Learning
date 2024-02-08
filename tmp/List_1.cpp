@@ -105,10 +105,10 @@ void exercicio2(void)
 
 void exercicio3(void)
 {
-    float buyValue { 0.0f }, discount { 0.0f };
+    float value { 0.0f };
 
     cout << "Valor da Compra: ";
-    cin >> buyValue;
+    cin >> value;
 
     char sex { '\0' };
 
@@ -119,12 +119,12 @@ void exercicio3(void)
         sex = std::tolower(sex);
     } while ( sex not_eq 'm' and sex not_eq 'f' );
 
-    discount = ( sex == 'm' ) ? buyValue * 0.1 : buyValue * 0.15;
+    float discount = ( sex == 'm' ) ? value * 0.1 : value * 0.15;
 
     cout
-		<< "\nValor Bruto......: R$ " << std::setprecision(4) << buyValue
+		<< "\nValor Bruto......: R$ " << std::setprecision(4) << value
         << "\nDesconto.........: R$ " << std::setprecision(4) << discount
-        << "\nValor Líquido....: R$ " << std::setprecision(4) << buyValue - discount
+        << "\nValor Líquido....: R$ " << std::setprecision(4) << value - discount
         << '\n'
 	;
 }
