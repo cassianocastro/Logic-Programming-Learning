@@ -1,10 +1,4 @@
-#include <array>
-#include <functional>
-#include <iostream>
-#include <iomanip>
-#include <map>
-#include <string>
-#include <utility>
+#include "../includes/List_2.hpp"
 
 using std::cin, std::cout, std::cerr;
 
@@ -355,7 +349,7 @@ void exercicio09(void)
     }
 }
 
-void exercicio010(void)
+void exercicio10(void)
 {
 	int month { 0 };
 

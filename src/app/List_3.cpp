@@ -1,7 +1,4 @@
-#include <functional>
-#include <iostream>
-#include <iomanip>
-#include <map>
+#include "../includes/List_3.hpp"
 
 using std::cin, std::cout, std::clog;
 
@@ -281,7 +278,7 @@ void exercicio08()
     }
 }
 
-void exercicio010()
+void exercicio10()
 {
 	int dividendo { 0 };
 	bool isPrime { true };
