@@ -77,15 +77,15 @@ int main(void)
 
 void exercicio1(void)
 {
-    float cotacao_dolar = 0.0f, valor_reais = 0.0f;
+    float dollarExchangeRate { 0.0f }, real { 0.0f };
 
-    cout << "Cotação em Dólar: ";
-    cin >> cotacao_dolar;
+    cout << "Cotação do dólar: ";
+    cin >> dollarExchangeRate;
 
     cout << "Valor em Reais: ";
-    cin >> valor_reais;
+    cin >> real;
 
-    cout << "O valor em dólares é: U$ " << std::setprecision(4) << valor_reais / cotacao_dolar;
+    cout << "O valor em dólares é: U$ " << std::setprecision(4) << real / dollarExchangeRate;
 }
 
 void exercicio2(void)
