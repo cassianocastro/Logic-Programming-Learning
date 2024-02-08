@@ -16,11 +16,11 @@ void exercicio1(void);
 
 /**
  * Faça um programa em que ao digitar um valor de temperatura em graus
- * Celcius o sistema converta em Fahrenheit e Kelvin,
- * sabendo se que para conversão Celcius X Fahrenheit a fórmula
- * aplicada será Fahrenheit = Celcius × 1,8 + 32 e para
- * conversão Celcius X Kelvin a fórmula aplicada
- * será Kelvin = Celcius + 273,15
+ * Celcius o sistema converta em Fahrenheit e Kelvin, sabendo-se que,
+ * para conversão Celcius X Fahrenheit a fórmula aplicada será:
+ * Fahrenheit = Celcius × 1,8 + 32.
+ * Para conversão Celcius X Kelvin a fórmula aplicada será:
+ * Kelvin = Celcius + 273,15
  */
 void exercicio2(void);
 
@@ -37,8 +37,7 @@ void exercicio3(void);
 
 /**
  * Faça um programa que leia um valor. Se o valor for menor que R$ 100,00,
- * então é concedido um desconto de 5%,
- * se o valor for superior a R$ 100,00,
+ * então é concedido um desconto de 5%, se o valor for superior a R$ 100,00,
  * então há um acréscimo de 7% sobre o valor.
  * O programa deverá exibir o valor bruto, o desconto concedido e o
  * valor líquido.
@@ -55,7 +54,7 @@ void exercicio5(void);
 
 /**
  * Faça um programa que leia 3 valores. Se a soma dos 3 valores for
- * superior a R$ 1000,00, então o programa desconta 10% da soma dos 3 valores,
+ * superior a R$ 1.000,00, então o programa desconta 10% da soma dos 3 valores,
  * senão o desconto será de 8%. O programa deverá exibir o valor
  * bruto(soma dos 3 valores), o desconto concedido e o valor líquido.
  */
@@ -81,13 +80,13 @@ void exercicio8(void);
 
 /**
  * Faça um programa que leia 5 números, em seguida,
- * demonstre qual o maior e o menor número digitado.
+ * demonstre quais são o maior e o menor número digitados.
  */
 void exercicio9(void);
 
 /**
  * Faça um programa que leia 10 números, em seguida, mostre quantos dos
- * números digitados é par e quantos números digitados é ímpar.
+ * números digitados são pares e quantos são ímpares.
  */
 void exercicio10(void);
 
