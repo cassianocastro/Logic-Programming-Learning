@@ -7,6 +7,6 @@ indent_style             = space
 insert_final_newline     = false
 trim_trailing_whitespace = true
 
-[*.py]
+[*.{c,cpp,h,hpp}]
 indent_size = 4
 #tab_width  = 4
