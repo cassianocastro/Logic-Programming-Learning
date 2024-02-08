@@ -8,21 +8,20 @@
 #include <vector>
 
 /**
- * Faça um algoritmo que leia um número, e seguida,
+ * Faça um algoritmo que leia um número, e em seguida,
  * informe se o número digitado é divisível por 3 e por 5.
  */
 void exercicio01(void);
 
 /**
- * Faça um algoritmo que solicite um numero, em seguida,
+ * Faça um algoritmo que solicite um número, e em seguida,
  * mostre quantos e quais são seus divisores.
  */
 void exercicio02(void);
 
 /**
- * Faça um algoritmo que leia um vetor de 10 posições com
- * números inteiros, em seguida, escreva
- * os números na ordem inversa que foram digitados.
+ * Faça um algoritmo que leia um vetor de 10 posições com números inteiros,
+ * em seguida, escreva os números na ordem inversa que foram digitados.
  */
 void exercicio03(void);
 
@@ -40,14 +39,14 @@ void exercicio05(void);
 
 /**
  * Faça um algoritmo que leia um vetor de 10 posições.
- * Em seguida, informe quais números do vetor digitado são divisíveis por 3 e 5.
+ * Em seguida, informe quais números do vetor são divisíveis por 3 e por 5.
  */
 void exercicio06(void);
 
 /**
- * Faça um algoritmo que leia um vetor de 10 posições.
- * Em seguida, informe quais números do vetor digitado são pares,
- * quais são impares e quais são primos
+ * Faça um algoritmo que leia um vetor de 10 posições. Em seguida,
+ * informe quais números do vetor são pares, quais são impares e quais são
+ * primos.
  */
 void exercicio07(void);
 
