@@ -131,7 +131,7 @@ void exercicio3(void)
 
 void exercicio4(void)
 {
-    float value = 0.0f;
+    float value { 0.0f };
 
     cout << "Valor: ";
     cin >> value;
@@ -164,20 +164,20 @@ void exercicio5(void)
 {
     Byte serie_informada = 0;
 
-    printf("Informe a série: ");
-    scanf("%hhu", &serie_informada);
+    cout << "Informe a série: ";
+    cin >> serie_informada;
 
     if ( serie_informada >= 1 and serie_informada <= 4 )
     {
-        puts("Turno da Manhã.");
+        cout << "Turno da Manhã.\n";
     }
     else if ( serie_informada >= 5 and serie_informada <= 8 )
     {
-        puts("Turno da Tarde.");
+        cout << "Turno da Tarde.\n";
     }
     else
     {
-        puts("Dígito inválido.");
+        clog << "Dígito inválido.\n";
     }
 }
 
