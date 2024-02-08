@@ -1,5 +1,7 @@
 #include "../src/includes/List_1.hpp"
 
+using std::cin, std::cout, std::clog;
+
 /**
  *
  */
@@ -7,7 +9,7 @@ int main(void)
 {
     std::setlocale(LC_ALL, "");
 
-    int opcao { 0 };
+    unsigned int option { 0 };
 
     while ( true )
 	{
@@ -24,13 +26,13 @@ int main(void)
             "\n8. Exercício nº 08"
             "\n9. Exercício nº 09"
             "\n10.Exercício nº 10"
-            "\nOpção? "
+            "\nOpção\? "
         ;
-        cin >> opcao;
+        cin >> option;
 
         system("clear");
 
-        switch ( opcao )
+        switch ( option )
 		{
             case EXERCICIO1:
                 exercicio1();
@@ -66,7 +68,7 @@ int main(void)
                 exit(EXIT_SUCCESS);
                 break;
             default:
-                puts("Opção inválida!");
+                clog << "Opção inválida!\n";
         }
     }
 
