@@ -109,12 +109,12 @@ void exercicio3(void)
 
     char sex { '\0' };
 
-    printf("Valor da Compra: ");
-    scanf("%f", &buyValue);
+    cout << "Valor da Compra: ";
+    cin >> buyValue;
 
     do {
-        printf("Sexo: ");
-        scanf(" %c", &sex);
+        cout << "Sexo: ";
+        cin >> sex;
 
         sex = tolower(sex);
     } while ( sex != 'm' and sex != 'f' );
@@ -130,14 +130,12 @@ void exercicio3(void)
         liquidValue = buyValue - discount;
     }
 
-    printf(
-		"\nValor Bruto......: R$ %.2f"
-        "\nValor Líquido....: R$ %.2f"
-        "\nDesconto.........: R$ %.2f",
-        buyValue,
-        liquidValue,
-        discount
-	);
+    cout
+		<< "\nValor Bruto......: R$ " << std::setprecision(4) << buyValue
+        << "\nValor Líquido....: R$ " << std::setprecision(4) << liquidValue
+        << "\nDesconto.........: R$ " << std::setprecision(4) << discount
+        << '\n'
+	;
 }
 
 void exercicio4(void)
