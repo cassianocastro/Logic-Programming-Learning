@@ -208,7 +208,7 @@ void exercicio6(void)
 
 void exercicio7(void)
 {
-    float x = 0.0f, y = 0.0f, a = 0.0f, b = 0.0f, valor_liquido = 0.0f;
+    float x { 0.0f }, y { 0.0f }, a { 0.0f }, b { 0.0f };
 
     cout << "Primeiro valor: ";
     cin >> x;
@@ -229,7 +229,7 @@ void exercicio7(void)
 
     if ( sum1 > sum2 )
     {
-        float discount = total * 0.2;
+        float discount = total * 0.2f;
 
         cout
 			<< "\nSoma dos 2 primeiros valores..: R$ " << sum1
@@ -242,7 +242,7 @@ void exercicio7(void)
     }
     else
     {
-        float addition = total * 0.2;
+        float addition = total * 0.2f;
 
         cout
 			<< "\nSoma dos 2 primeiros valores..: R$ " << sum1
