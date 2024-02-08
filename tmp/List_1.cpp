@@ -119,16 +119,9 @@ void exercicio3(void)
         sex = tolower(sex);
     } while ( sex != 'm' and sex != 'f' );
 
-    if ( sex == 'm' )
-    {
-        discount    = buyValue * 0.1;
-        liquidValue = buyValue - discount;
-    }
-    else
-    {
-        discount    = buyValue * 0.15;
-        liquidValue = buyValue - discount;
-    }
+    discount = ( sex == 'm' ) ? buyValue * 0.1 : buyValue * 0.15;
+
+    liquidValue = buyValue - discount;
 
     cout
 		<< "\nValor Bruto......: R$ " << std::setprecision(4) << buyValue
