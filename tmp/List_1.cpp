@@ -131,7 +131,7 @@ void exercicio3(void)
 
 void exercicio4(void)
 {
-    float valor = 0.0f, valor_liquido = 0.0f;
+    float valor = 0.0f;
 
     cout << "Valor: ";
     cin >> valor;
@@ -139,24 +139,22 @@ void exercicio4(void)
     if ( valor < 100.0f )
     {
         float desconto = valor * 0.05f;
-        valor_liquido  = valor - desconto;
 
         cout
-			<< "\nValor Bruto......: R$ " << std::setprecision(4) << valor,
-            << "\nValor Líquido....: R$ " << std::setprecision(4) << valor_liquido,
+			<< "\nValor Bruto......: R$ " << std::setprecision(4) << valor
             << "\nDesconto.........: R$ " << std::setprecision(4) << desconto
+            << "\nValor Líquido....: R$ " << std::setprecision(4) << valor - desconto
             << '\n'
 		;
     }
     else
     {
         float acrescimo = valor * 0.07f;
-        valor_liquido   = valor + acrescimo;
 
         cout
 			<< "\nValor Bruto......: R$ " << std::setprecision(4) << valor
-            << "\nValor Líquido....: R$ " << std::setprecision(4) << valor_liquido
             << "\nAcréscimo........: R$ " << std::setprecision(4) << acrescimo
+            << "\nValor Líquido....: R$ " << std::setprecision(4) << valor + acrescimo
             << '\n'
 		;
     }
