@@ -266,8 +266,6 @@ void exercicio8(void)
         cout << "Valor: ";
         cin >> array[i];
 
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
         if ( array[i] > biggest )
         {
             biggest = array[i];
@@ -287,8 +285,6 @@ void exercicio9(void)
 	{
         cout << "Valor número " << i + 1 << ": ";
         cin >> array[i];
-
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         if ( i == 0 )
         {
