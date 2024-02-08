@@ -10,6 +10,7 @@
 #include <cstring>
 #include <iostream>
 #include <iomanip>
+#include <limits>
 
 typedef unsigned char Byte;
 
