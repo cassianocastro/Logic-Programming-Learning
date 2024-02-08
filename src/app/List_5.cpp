@@ -396,11 +396,3 @@ void exercicio10(void)
 
     cout << '\n';
 }
-
-
-int main(void)
-{
-    exercicio10();
-
-    return 0;
-}
