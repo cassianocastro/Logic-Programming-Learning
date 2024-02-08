@@ -2,6 +2,11 @@
 
 #define LIST_5_HPP
 
+#include <array>
+#include <iostream>
+#include <iomanip>
+#include <vector>
+
 /**
  * Faça um algoritmo que gere um vetor de 10 posições com números inteiros
  * preenchidos aleatoriamente no intervalo 0 a 50, em seguida, escreva os números
