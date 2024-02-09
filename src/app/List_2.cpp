@@ -2,7 +2,7 @@
 
 using std::cin, std::cout, std::cerr;
 
-void List_2::exercicio01(void)
+void List_2::exercise01(void)
 {
 	int x { 0 }, y { 0 };
 
@@ -24,7 +24,7 @@ void List_2::exercicio01(void)
     cout << '\n';
 }
 
-void List_2::exercicio03(void)
+void List_2::exercise03(void)
 {
     std::array<std::string, 5> offices = { "Gerente", "Supervisor", "Contador", "Digitador", "Auxiliar Administrativo" };
 
@@ -51,7 +51,7 @@ void List_2::exercicio03(void)
     }
 }
 
-void List_2::exercicio04(void)
+void List_2::exercise04(void)
 {
     int number { 0 };
 
@@ -93,7 +93,7 @@ void List_2::exercicio04(void)
     }
 }
 
-void List_2::exercicio05(void)
+void List_2::exercise05(void)
 {
     char sex { '\0' };
 
@@ -129,7 +129,7 @@ void List_2::exercicio05(void)
     }
 }
 
-void List_2::exercicio06(void)
+void List_2::exercise06(void)
 {
 	char option { 's' }, sex { '\0' };
 
@@ -175,7 +175,7 @@ void List_2::exercicio06(void)
     }
 }
 
-void List_2::exercicio07(void)
+void List_2::exercise07(void)
 {
     std::map<int, std::function<int (int, int)>> options =
     {
@@ -236,7 +236,7 @@ void List_2::exercicio07(void)
     }
 }
 
-void List_2::exercicio08(void)
+void List_2::exercise08(void)
 {
     int idade { 0 };
 
@@ -283,7 +283,7 @@ void List_2::exercicio08(void)
     }
 }
 
-void List_2::exercicio09(void)
+void List_2::exercise09(void)
 {
     int codigo { 0 }, idade { 0 };
 
@@ -349,7 +349,7 @@ void List_2::exercicio09(void)
     }
 }
 
-void List_2::exercicio10(void)
+void List_2::exercise10(void)
 {
 	int month { 0 };
 
