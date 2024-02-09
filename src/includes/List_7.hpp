@@ -2,6 +2,9 @@
 
 #define LIST_7_HPP
 
+/**
+ * @see file://./../../assets/Lista_7.pdf
+ */
 namespace List_7
 {
 
