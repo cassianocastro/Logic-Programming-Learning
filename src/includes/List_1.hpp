@@ -7,7 +7,7 @@
 #include <iomanip>
 
 /**
- * @see file://./../../assets/Lista_1.pdf
+ * @see file://./../../assets/List_1.pdf
  */
 namespace List_1
 {

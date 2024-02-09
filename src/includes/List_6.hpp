@@ -3,7 +3,7 @@
 #define LIST_6_HPP
 
 /**
- * @see file://./../../assets/Lista_6.pdf
+ * @see file://./../../assets/List_6.pdf
  */
 namespace List_6
 {

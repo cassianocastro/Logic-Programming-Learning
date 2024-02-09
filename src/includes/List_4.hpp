@@ -8,7 +8,7 @@
 #include <vector>
 
 /**
- * @see file://./../../assets/Lista_4.pdf
+ * @see file://./../../assets/List_4.pdf
  */
 namespace List_4
 {
