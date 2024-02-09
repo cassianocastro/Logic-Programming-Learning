@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-    Tests::Exercise03().doExercise();
+    // Tests::Exercise03().doExercise();
 
     return EXIT_SUCCESS;
 }
