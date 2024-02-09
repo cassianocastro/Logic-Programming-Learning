@@ -16,12 +16,12 @@ namespace List_2
     /**
      *
      */
-    void exercicio01(void);
+    void exercise01(void);
 
     /**
      *
      */
-    void exercicio02(void);
+    void exercise02(void);
 
     /**
      * Escreva um programa que leia um número que é o código do empregado, em seguida,
@@ -39,7 +39,7 @@ namespace List_2
      * | 4      | Digitador |
      * | 5      | Auxiliar administrativo |
      */
-    void exercicio03(void);
+    void exercise03(void);
 
     /**
      * Faça um programa que leia um número de classificação do piloto de fórmula 1
@@ -57,7 +57,7 @@ namespace List_2
      * | 9 ou 10     | Quinta Fila |
      * | Acima de 10 | Sexta Fila em diante |
      */
-    void exercicio04(void);
+    void exercise04(void);
 
     /**
      * Escreva um programa que faça as seguintes ações:
@@ -80,7 +80,7 @@ namespace List_2
      *
      * O programa deverá ser finalizado quando no campo sexo for digitado “s”.
      */
-    void exercicio05(void);
+    void exercise05(void);
 
     /**
      * Faça um programa que receba a altura e o sexo de uma pessoa, calcule e
@@ -93,7 +93,7 @@ namespace List_2
      * O programa deverá oferecer um opção para continuar ou finalizar
      * digitando alguma letra ou número.
      */
-    void exercicio06(void);
+    void exercise06(void);
 
     /**
      * Escreva um programa que exiba as seguintes opções:
@@ -112,7 +112,7 @@ namespace List_2
      *
      * O sistema não deve permitir divisão por zero.
      */
-    void exercicio07(void);
+    void exercise07(void);
 
     /**
      * Faça um programa que receba a idade de um nadador e
@@ -132,7 +132,7 @@ namespace List_2
      *
      * O sistema não permitirá digitação de idade negativa (menor que zero).
      */
-    void exercicio08(void);
+    void exercise08(void);
 
     /**
      * Uma companhia de seguros tem três categorias de seguros baseadas na
@@ -155,7 +155,7 @@ namespace List_2
      * **Exemplo**: Ao digitar a idade 28 e o código 5, escreva Grupo Médio, todavia,
      * se for digitado idade 28 e código 8, escreva código inválido.
      */
-    void exercicio09(void);
+    void exercise09(void);
 
     /**
      * Faça um programa que determine os meses e as estações do ano aos quais os
@@ -185,7 +185,7 @@ namespace List_2
      *
      * No mês 9 a mudança ocorre no dia 23.
      */
-    void exercicio10(void);
+    void exercise10(void);
 }
 
 #endif

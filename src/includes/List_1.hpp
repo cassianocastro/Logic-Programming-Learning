@@ -15,7 +15,7 @@ namespace List_1
      * Faça um programa que converta a moeda real em dólar,
      * informando-se apenas a cotação do dólar e o valor em reais.
      */
-    void exercicio1(void);
+    void exercise01(void);
 
     /**
      * Faça um programa em que ao digitar um valor de temperatura em graus
@@ -28,7 +28,7 @@ namespace List_1
      *
      * Kelvin = Celcius + 273,15
      */
-    void exercicio2(void);
+    void exercise02(void);
 
     /**
      * Faça um programa que leia o sexo da pessoa e o valor de uma compra.
@@ -40,7 +40,7 @@ namespace List_1
      * O programa deverá exibir o valor bruto, o desconto concedido e o
      * valor líquido.
      */
-    void exercicio3(void);
+    void exercise03(void);
 
     /**
      * Faça um programa que leia um valor. Se o valor for menor que R$ 100,00,
@@ -50,7 +50,7 @@ namespace List_1
      * O programa deverá exibir o valor bruto, o desconto concedido e o
      * valor líquido.
      */
-    void exercicio4(void);
+    void exercise04(void);
 
     /**
      * Faça um programa que leia a série que o aluno estuda.
@@ -59,7 +59,7 @@ namespace List_1
      * escrever “Turno da manhã”, se o aluno estuda da 5 a 8 série,
      * então o programa deverá escrever “Turno da tarde”.
      */
-    void exercicio5(void);
+    void exercise05(void);
 
     /**
      * Faça um programa que leia 3 valores. Se a soma dos 3 valores for
@@ -69,7 +69,7 @@ namespace List_1
      * O programa deverá exibir o valor bruto(soma dos 3 valores),
      * o desconto concedido e o valor líquido.
      */
-    void exercicio6(void);
+    void exercise06(void);
 
     /**
      * Faça um programa que leia 4 números. Se a soma dos dois primeiros números
@@ -82,25 +82,25 @@ namespace List_1
      * últimos números, o valor bruto(soma dos 4 valores), o desconto ou acréscimo
      * concedido e o valor líquido.
      */
-    void exercicio7(void);
+    void exercise07(void);
 
     /**
      * Faça um programa que leia 5 números, em seguida,
      * demonstre qual o maior número digitado.
      */
-    void exercicio8(void);
+    void exercise08(void);
 
     /**
      * Faça um programa que leia 5 números, em seguida,
      * demonstre quais são o maior e o menor número digitados.
      */
-    void exercicio9(void);
+    void exercise09(void);
 
     /**
      * Faça um programa que leia 10 números, em seguida, mostre quantos dos
      * números digitados são pares e quantos são ímpares.
      */
-    void exercicio10(void);
+    void exercise10(void);
 }
 
 #endif

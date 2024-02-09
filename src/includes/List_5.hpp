@@ -17,7 +17,7 @@ namespace List_5
      *
      * O tamanho do vetor deverá ser definido em uma variável constante.
      */
-    void exercicio01(void);
+    void exercise01(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 10 posições com números inteiros preenchidos
@@ -26,7 +26,7 @@ namespace List_5
      * O tamanho do vetor e o limite de geração dos números aleatórios deverão ser
      * definidos em variáveis constantes.
      */
-    void exercicio02(void);
+    void exercise02(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 10 posições com números inteiros
@@ -36,7 +36,7 @@ namespace List_5
      * O tamanho do vetor e o limite de geração dos números aleatórios deverão ser
      * definidos em variáveis constantes.
      */
-    void exercicio03(void);
+    void exercise03(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 10 posições com números inteiros
@@ -46,7 +46,7 @@ namespace List_5
      * O tamanho do vetor e o limite de geração dos números aleatórios deverão ser
      * definidos em variáveis constantes.
      */
-    void exercicio04(void);
+    void exercise04(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 10 posições com números inteiros
@@ -56,7 +56,7 @@ namespace List_5
      * O tamanho do vetor os limites inferior e superior de geração
      * dos números aleatórios deverão ser definidos em variáveis constantes.
      */
-    void exercicio05(void);
+    void exercise05(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 10 posições com números inteiros
@@ -69,7 +69,7 @@ namespace List_5
      * O tamanho do vetor e o limite de geração dos números aleatórios deverão ser
      * definidos em variáveis constantes.
      */
-    void exercicio06(void);
+    void exercise06(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 10 posições com números inteiros preenchidos
@@ -83,7 +83,7 @@ namespace List_5
      * O tamanho do vetor e o limite de geração dos números aleatórios deverão ser
      * definidos em variáveis constantes.
      */
-    void exercicio07(void);
+    void exercise07(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 5 posições preenchido com números aleatoriamente
@@ -94,7 +94,7 @@ namespace List_5
      * O tamanho do vetor e o limite de geração dos números aleatórios deverão ser
      * definidos em variáveis constantes.
      */
-    void exercicio08(void);
+    void exercise08(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 5 posições com números primos preenchidos
@@ -103,7 +103,7 @@ namespace List_5
      * O tamanho do vetor e o limite de geração dos números aleatórios deverão ser
      * definidos em variáveis constantes.
      */
-    void exercicio09(void);
+    void exercise09(void);
 
     /**
      * Faça um algoritmo que gere um vetor de 10 posições com números inteiros preenchidos
@@ -114,7 +114,7 @@ namespace List_5
      * O tamanho do vetor e os limites inferior e superior de geração dos números
      * aleatórios deverão ser definidos em variáveis constantes.
      */
-    void exercicio10(void);
+    void exercise10(void);
 }
 
 #endif

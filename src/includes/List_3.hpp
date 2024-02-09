@@ -18,7 +18,7 @@ namespace List_3
      * Faça um algoritmo que calcule o salário do funcionário de acordo com o
      * número de horas trabalhadas.
      */
-    void exercicio01(void);
+    void exercise01(void);
 
     /**
      * Ao construir uma casa, um engenheiro precisa saber quantos tijolos
@@ -34,7 +34,7 @@ namespace List_3
      * Ajude o engenheiro a calcular a quantidade de tijolos que ele utilizará
      * na obra.
      */
-    void exercicio02(void);
+    void exercise02(void);
 
     /**
      * Faça um algoritmo que leia a idade de uma pessoa expressa em anos,
@@ -42,7 +42,7 @@ namespace List_3
      *
      * Considere o ano com 365 dias e o mês com 30 dias.
      */
-    void exercicio03(void);
+    void exercise03(void);
 
     /**
      * Faça um algoritmo que leia a idade de uma pessoa expressa em dias
@@ -50,7 +50,7 @@ namespace List_3
      *
      * Considere o ano com 365 dias e o mês com 30 dias.
      */
-    void exercicio04(void);
+    void exercise04(void);
 
     /**
      * O cardápio de uma lancheria é o seguinte:
@@ -75,7 +75,7 @@ namespace List_3
      * Qualquer código diferente dos mostrados acima o sistema deverá informar
      * código inválido.
      */
-    void exercicio05(void);
+    void exercise05(void);
 
     /**
      * Uma transportadora calcula o valor que será cobrado pelo frete aplicando um
@@ -93,7 +93,7 @@ namespace List_3
      * | Entre 501 e 1000 Km | 13,00% |
      * | Acima de 1000 Km | 10,00% |
      */
-    void exercicio06(void);
+    void exercise06(void);
 
     /**
      * Escrever um algoritmo que lê um valor em reais e calcula o menor número
@@ -104,7 +104,7 @@ namespace List_3
      *
      * Obs.: Considere apenas valores inteiros, os centavos não serão informados.
      */
-    void exercicio07(void);
+    void exercise07(void);
 
     /**
      * Faça um algoritmo que calcule a área de um círculo, ou de um retângulo,
@@ -121,7 +121,7 @@ namespace List_3
      *
      * O sistema deverá ser finalizado quando for informada opção 0(zero).
      */
-    void exercicio08(void);
+    void exercise08(void);
 
     /**
      * Em um aeroporto o sistema de embarque deve verificar o peso da bagagem e dos
@@ -142,13 +142,13 @@ namespace List_3
      * indicando que a leitura dos dados dos passageiros foi finalizada, emitindo o total de peso
      * acumulado e o número de passageiros.
      */
-    void exercicio09(void);
+    void exercise09(void);
 
     /**
      * Faça um programa que leia um número. Em seguida,
      * diga se o número é primo ou não.
      */
-    void exercicio10(void);
+    void exercise10(void);
 }
 
 #endif
