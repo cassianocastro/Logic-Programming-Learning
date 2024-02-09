@@ -2,7 +2,7 @@
 
 using std::cin, std::cout, std::clog;
 
-void exercicio01(void)
+void List_3::exercicio01(void)
 {
     float hours { 0.0f }, extra { 0.0f };
 
@@ -18,7 +18,7 @@ void exercicio01(void)
 	cout << "Salário total: R$ " << std::setprecision(4) << hours + extra << '\n';
 }
 
-void exercicio02(void)
+void List_3::exercicio02(void)
 {
     float metragem { 0.0f }, total { 0.0f };
 
@@ -50,7 +50,7 @@ void exercicio02(void)
 	cout << "Total de tijolos necessários: " << std::setprecision(4) << total << " por metro quadrado.\n";
 }
 
-void exercicio03(void)
+void List_3::exercicio03(void)
 {
     unsigned int idadeDIA { 0 }, idadeMES { 0 }, idadeANO { 0 };
 
@@ -69,7 +69,7 @@ void exercicio03(void)
 	cout << "Total de dias vividos: " << idadeANO + idadeMES + idadeDIA << '\n';
 }
 
-void exercicio04(void)
+void List_3::exercicio04(void)
 {
     int idadeDIA { 0 };
 
@@ -98,7 +98,7 @@ float calcularPreco(int code, int qtde)
     else return qtde * 2;
 }
 
-void exercicio05(void)
+void List_3::exercicio05(void)
 {
     const std::map<int, std::string> products =
     {
@@ -145,7 +145,7 @@ void exercicio05(void)
     }
 }
 
-void exercicio06(void)
+void List_3::exercicio06(void)
 {
 	float encomenda { 0.0f }, distance { 0.0f }, frete { 0.0f };
 
@@ -179,7 +179,7 @@ void exercicio06(void)
 	cout << "O valor do frete é: R$ " << std::setprecision(4) << frete << '\n';
 }
 
-void exercicio07(void)
+void List_3::exercicio07(void)
 {
     int value { 0 }, diferenca { 0 };
 
@@ -210,7 +210,7 @@ void exercicio07(void)
 	cout << notas1 << " nota(s) de 1 real.\n";
 }
 
-void exercicio08(void)
+void List_3::exercicio08(void)
 {
     const std::map<int, std::function<float ()>> options =
     {
@@ -278,7 +278,7 @@ void exercicio08(void)
     }
 }
 
-void exercicio10(void)
+void List_3::exercicio10(void)
 {
 	int dividendo { 0 };
 	bool isPrime { true };

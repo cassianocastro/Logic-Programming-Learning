@@ -2,7 +2,7 @@
 
 using std::cin, std::cout, std::clog;
 
-void exercicio1(void)
+void List_1::exercicio1(void)
 {
     float dollarExchangeRate { 0.0f }, real { 0.0f };
 
@@ -15,7 +15,7 @@ void exercicio1(void)
     cout << "O valor em dólares é: U$ " << std::setprecision(4) << real / dollarExchangeRate;
 }
 
-void exercicio2(void)
+void List_1::exercicio2(void)
 {
     float celsius { 0.0f };
 
@@ -30,7 +30,7 @@ void exercicio2(void)
 	;
 }
 
-void exercicio3(void)
+void List_1::exercicio3(void)
 {
     float value { 0.0f };
 
@@ -56,7 +56,7 @@ void exercicio3(void)
 	;
 }
 
-void exercicio4(void)
+void List_1::exercicio4(void)
 {
     float value { 0.0f };
 
@@ -87,7 +87,7 @@ void exercicio4(void)
     }
 }
 
-void exercicio5(void)
+void List_1::exercicio5(void)
 {
     Byte serie { 0 };
 
@@ -108,7 +108,7 @@ void exercicio5(void)
     }
 }
 
-void exercicio6(void)
+void List_1::exercicio6(void)
 {
     float x { 0.0f }, y { 0.0f }, z { 0.0f };
 
@@ -133,7 +133,7 @@ void exercicio6(void)
 	;
 }
 
-void exercicio7(void)
+void List_1::exercicio7(void)
 {
     float x { 0.0f }, y { 0.0f }, a { 0.0f }, b { 0.0f };
 
@@ -182,7 +182,7 @@ void exercicio7(void)
     }
 }
 
-void exercicio8(void)
+void List_1::exercicio8(void)
 {
     std::array<int, 5> array {};
 
@@ -202,7 +202,7 @@ void exercicio8(void)
     cout << "O maior número informado foi: " << biggest << '\n';
 }
 
-void exercicio9(void)
+void List_1::exercicio9(void)
 {
     std::array<int, 5> array {};
 
@@ -236,7 +236,7 @@ void exercicio9(void)
 	;
 }
 
-void exercicio10(void)
+void List_1::exercicio10(void)
 {
     std::array<int, 10> array {};
 

@@ -2,7 +2,7 @@
 
 using std::cout, std::cin;
 
-void exercicio01(void)
+void List_5::exercicio01(void)
 {
     const int ARRAY_SIZE = 10;
 
@@ -22,7 +22,7 @@ void exercicio01(void)
     cout << '\n';
 }
 
-void exercicio02(void)
+void List_5::exercicio02(void)
 {
     const unsigned short int ARRAY_SIZE = 10, RANDOM_LIMIT = 51;
 
@@ -56,7 +56,7 @@ int getRandomNumber(void)
     return number;
 }
 
-void exercicio03(void)
+void List_5::exercicio03(void)
 {
     const unsigned int ARRAY_SIZE { 10 };
 
@@ -109,7 +109,7 @@ int getSmallestValueFromArray(const std::array<int, 10>* const array)
     return smallest;
 }
 
-void exercicio04(void)
+void List_5::exercicio04(void)
 {
     const unsigned short int ARRAY_SIZE { 10 };
 
@@ -136,7 +136,7 @@ void exercicio04(void)
     ;
 }
 
-void exercicio05(void)
+void List_5::exercicio05(void)
 {
     const unsigned short int ARRAY_SIZE { 10 }, RANDOM_MIN { 20 }, RANDOM_LIMIT { 50 };
 
@@ -168,7 +168,7 @@ int even(const bool isEven)
     return ( number % 2 != 0 ) ? number : (number + 1);
 }
 
-void exercicio06(void)
+void List_5::exercicio06(void)
 {
     const unsigned short int ARRAY_SIZE { 10 };
 
@@ -189,7 +189,7 @@ void exercicio06(void)
     cout << '\n';
 }
 
-void exercicio07(void)
+void List_5::exercicio07(void)
 {
     const unsigned short int ARRAY_SIZE { 10 }, RANDOM_LIMIT { 51 };
 
@@ -231,7 +231,7 @@ void exercicio07(void)
     cout << '\n';
 }
 
-void exercicio08(void)
+void List_5::exercicio08(void)
 {
     const unsigned short int ARRAY_SIZE { 5 }, RANDOM_LIMIT { 101 };
 
@@ -274,7 +274,7 @@ bool isPrime(const int dividend)
     return true;
 }
 
-void exercicio09(void)
+void List_5::exercicio09(void)
 {
     const unsigned short int ARRAY_SIZE { 5 }, RANDOM_LIMIT { 101 };
 
@@ -299,7 +299,7 @@ void exercicio09(void)
     cout << '\n';
 }
 
-void exercicio10(void)
+void List_5::exercicio10(void)
 {
     const unsigned short int ARRAY_SIZE { 10 }, RANDOM_LIMIT { 51 };
 

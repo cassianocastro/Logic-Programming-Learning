@@ -2,7 +2,7 @@
 
 using std::cin, std::cout;
 
-void exercicio01(void)
+void List_4::exercicio01(void)
 {
     int number { 0 };
 
@@ -15,7 +15,7 @@ void exercicio01(void)
         cout << "Não é divisível por 3 e 5.\n";
 }
 
-void exercicio02(void)
+void List_4::exercicio02(void)
 {
     std::vector<int> dividers {};
 
@@ -42,7 +42,7 @@ void exercicio02(void)
     cout << "Total de divisores encontrados: " << count << '\n';
 }
 
-void exercicio03(void)
+void List_4::exercicio03(void)
 {
     std::array<int, 10> list = {};
 
@@ -65,7 +65,7 @@ void exercicio03(void)
     cout << '\n';
 }
 
-void exercicio04(void)
+void List_4::exercicio04(void)
 {
     int soma { 0 };
 
@@ -91,7 +91,7 @@ void exercicio04(void)
     ;
 }
 
-void exercicio05(void)
+void List_4::exercicio05(void)
 {
     std::array<int, 10> list {};
 
@@ -112,7 +112,7 @@ void exercicio05(void)
     }
 }
 
-void exercicio06(void)
+void List_4::exercicio06(void)
 {
     std::array<int, 10> list {};
 
@@ -159,7 +159,7 @@ bool isPrime(int dividend)
     return true;
 }
 
-void exercicio07(void)
+void List_4::exercicio07(void)
 {
     std::array<int, 10> lista {};
 
@@ -189,7 +189,7 @@ void exercicio07(void)
     }
 }
 
-void exercicio08(void)
+void List_4::exercicio08(void)
 {
     std::vector<int> vector {}, reversed {};
 
@@ -214,7 +214,7 @@ void exercicio08(void)
     cout << '\n';
 }
 
-void exercicio09(void)
+void List_4::exercicio09(void)
 {
     std::array<int, 5> array1 {}, array2 {}, array3 {};
 
@@ -237,7 +237,7 @@ void exercicio09(void)
     cout << std::endl;
 }
 
-void exercicio10(void)
+void List_4::exercicio10(void)
 {
     int biggest { 0 };
 
